@@ -128,8 +128,8 @@ const Home = () => {
                 <div className="container-xxl">
                     <div className="row">
                         <div className="col-12">
-                            <div className="categories d-flex justify-content-between align-items-center">
-                                <div className='d-flex gap-30 align-items-center'>
+                            <div className="categories d-flex flex-wrap align-items-center">
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Camera</h6>
                                         <p>10 Items</p>
@@ -137,7 +137,7 @@ const Home = () => {
                                     <img src={Camera} alt="" />
                                 </div>
 
-                                <div className='d-flex gap-30 align-items-center'>
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Headphone</h6>
                                         <p>10 Items</p>
@@ -145,7 +145,7 @@ const Home = () => {
                                     <img src={Headphone} alt="" />
                                 </div>
 
-                                <div className='d-flex gap-30 align-items-center'>
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Speaker</h6>
                                         <p>10 Items</p>
@@ -153,7 +153,39 @@ const Home = () => {
                                     <img src={Speaker} alt="" />
                                 </div>
 
-                                <div className='d-flex gap-30 align-items-center'>
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
+                                    <div>
+                                        <h6>Laptop</h6>
+                                        <p>10 Items</p>
+                                    </div>
+                                    <img src={Laptop} alt="" />
+                                </div>
+
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
+                                    <div>
+                                        <h6>Camera</h6>
+                                        <p>10 Items</p>
+                                    </div>
+                                    <img src={Camera} alt="" />
+                                </div>
+
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
+                                    <div>
+                                        <h6>Headphone</h6>
+                                        <p>10 Items</p>
+                                    </div>
+                                    <img src={Headphone} alt="" />
+                                </div>
+
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
+                                    <div>
+                                        <h6>Speaker</h6>
+                                        <p>10 Items</p>
+                                    </div>
+                                    <img src={Speaker} alt="" />
+                                </div>
+
+                                <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Laptop</h6>
                                         <p>10 Items</p>

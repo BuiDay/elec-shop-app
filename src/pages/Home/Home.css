@@ -71,3 +71,27 @@
     box-shadow: 0 0 10px #0000001a;
     padding: 15px;
 }
+
+.categories > div {
+    width: 25%;
+    padding: 10px 0;
+}
+
+.categories > div:nth-child(1),
+.categories > div:nth-child(2),
+.categories > div:nth-child(3),
+.categories > div:nth-child(4){
+    border-bottom: 1px solid var(--color-ededed);
+}
+
+.categories > div:nth-child(1),
+.categories > div:nth-child(2),
+.categories > div:nth-child(3){
+    border-right: 1px solid var(--color-ededed);
+}
+
+.categories > div:nth-child(5),
+.categories > div:nth-child(6),
+.categories > div:nth-child(7){
+    border-right: 1px solid var(--color-ededed);
+}
