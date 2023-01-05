@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css'
+import Marquee from "react-fast-marquee";
 import MainBanner from '../../assets/images/main-banner-1.jpg'
 import CatBanner_1 from '../../assets/images/catbanner-01.jpg'
 import CatBanner_2 from '../../assets/images/catbanner-02.jpg'
@@ -15,6 +16,7 @@ import Camera from '../../assets/images/camera.jpg'
 import Headphone from '../../assets/images/headphone.jpg'
 import Speaker from '../../assets/images/speaker.jpg'
 import Laptop from '../../assets/images/laptop.jpg'
+import BlogCard from '../../components/BlogCard/BlogCard';
 
 
 const Home = () => {
@@ -194,6 +196,71 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='blog-wrapper home-wrapper-2 py-5'>
+                <div className="container-xxl">
+                    <div className="row">
+                        <div className="col-12">
+                            <h3 className='section-heading'>Featured Collection</h3>
+                        </div>
+                       <BlogCard />
+                       <BlogCard />
+                       <BlogCard />
+                       <BlogCard />
+                    </div>
+                </div>
+            </section>
+
+            <section className='marquee-wrapper py-5'>
+                <div className="container-xxl">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="marquee-inner-wrapper card-wrapper">
+                                <Marquee gradient={false} className='d-flex'>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-01.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-02.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-03.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-04.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-05.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-06.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-07.png')} alt="brand" />
+                                    </div>
+                                    <div className='mx-4 w-25'>
+                                        <img src={require('../../assets/images/brand-08.png')} alt="brand" />
+                                    </div>
+                                </Marquee>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='blog-wrapper home-wrapper-2 py-5'>
+                <div className="container-xxl">
+                    <div className="row">
+                        <div className="col-12">
+                            <h3 className='section-heading'>Our Latest Blogs</h3>
+                        </div>
+                       <BlogCard />
+                       <BlogCard />
+                       <BlogCard />
+                       <BlogCard />
                     </div>
                 </div>
             </section>
