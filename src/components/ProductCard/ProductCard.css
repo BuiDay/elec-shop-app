@@ -1,0 +1,24 @@
+.product-card{
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.product-card .product-details h6{
+    color: var(--color-bf4800);
+    font-size: 13px;
+}
+
+.product-card .product-details h5{
+    color: var(--color-1c1c1b);
+    font-size: 15px;
+}
+
+.product-card .product-details .price{
+    color: var(--color-1c1c1b);
+    font-size: 16px;
+}
+
+.star-ratings .star-container {
+    padding: 0 !important;
+}

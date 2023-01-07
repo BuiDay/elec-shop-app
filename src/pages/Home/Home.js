@@ -17,6 +17,7 @@ import Headphone from '../../assets/images/headphone.jpg'
 import Speaker from '../../assets/images/speaker.jpg'
 import Laptop from '../../assets/images/laptop.jpg'
 import BlogCard from '../../components/BlogCard/BlogCard';
+import ProductCard from '../../components/ProductCard/ProductCard';
 
 
 const Home = () => {
@@ -206,10 +207,10 @@ const Home = () => {
                         <div className="col-12">
                             <h3 className='section-heading'>Featured Collection</h3>
                         </div>
-                       <BlogCard />
-                       <BlogCard />
-                       <BlogCard />
-                       <BlogCard />
+                        <ProductCard/>
+                        <ProductCard/>
+                        <ProductCard/>
+                        <ProductCard/>
                     </div>
                 </div>
             </section>
