@@ -32,9 +32,9 @@ const Header = () => {
                                 </h1>
                             </div>
                             <div className="col-5">
-                                <div class="input-group py-2">
+                                <div className="input-group py-2">
                                     <input  type="text" 
-                                            class="form-control" 
+                                            className="form-control" 
                                             placeholder='Search product here...'
                                     />
                                     <span className='input-group-text py-3'>
@@ -45,19 +45,19 @@ const Header = () => {
                             <div className="col-5">
                                 <div className="header-top-upper d-flex align-items-center justify-between-content">
                                     <div>
-                                        <Link className='d-flex align-items-center gap-10 text-white'>
+                                        <Link to='compare-products' className='d-flex align-items-center gap-10 text-white compare-products'>
                                             <img src={Compare} alt="" />
                                             <p>Compare Products</p>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link className='d-flex align-items-center gap-10 text-white'>
+                                        <Link className='d-flex align-items-center gap-10 text-white wishlist'>
                                             <img src={Wishlist} alt="" />
                                             <p>Wishlist Products</p>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link className='d-flex align-items-center gap-10 text-white'>
+                                        <Link className='d-flex align-items-center gap-10 text-white user'>
                                             <img src={User} alt="" />
                                             <p>Log in my account</p>
                                         </Link>
@@ -88,9 +88,9 @@ const Header = () => {
                                 <div className='menu-links'>
                                     <div className="d-flex align-items-center gap-15">
                                         <NavLink to="/">Home</NavLink>
-                                        <NavLink to="/">Our Store</NavLink>
-                                        <NavLink>Blogs</NavLink>
-                                        <NavLink>Contact</NavLink>
+                                        <NavLink to="ourstore">Our Store</NavLink>
+                                        <NavLink to="blog">Blogs</NavLink>
+                                        <NavLink to="contact">Contact</NavLink>
                                     </div>
                                 </div>
                             </div>

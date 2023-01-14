@@ -95,3 +95,32 @@
 .categories > div:nth-child(7){
     border-right: 1px solid var(--color-ededed);
 }
+
+.famous-card{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px #0000001a;
+    min-height: 440px;
+}
+
+.famous-wrapper .famous-content h5{
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 7px;
+}
+
+.famous-wrapper .famous-content h6{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+    color: black;
+}
+
+.famous-wrapper .famous-content p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 100;
+    color: black;
+}

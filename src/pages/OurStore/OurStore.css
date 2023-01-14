@@ -1,0 +1,97 @@
+.filter-card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.filter-tilte{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--color-1c1c1b);
+    margin-bottom: 20px;
+}
+
+.filter-card ul,
+.filter-card .form-check-label{
+    font-size: 13px;
+    line-height: 30px;
+    color:var(--color-777777);
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.filter-card .form-check-input:focus{
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+.filter-card .form-check-input:checked{
+    background-color: var(--color-febd69);
+    border-color: var(--color-febd69);
+}
+
+.sub-title{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-1c1c1b);
+    margin: 15px 0;
+}
+
+.colors{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.colors li{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.form-check-input {
+    margin-top: 0;
+}
+
+.random-products-left{
+    width: 40%;
+}
+
+.filter-sort-grid p{
+    white-space:nowrap;
+}
+
+.random-products-right{
+    width: 60%;
+}
+
+.random-products h5{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.random-products:first-child{
+    border-bottom: 1px solid var(--color-ededed);
+}
+
+.filter-sort-grid{
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.grid img{
+    height: 34px;
+    width: 34px;
+    background-color: #f2f2f2;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.grid img.active{
+    background-color: #d4d3d3;
+}

@@ -2,12 +2,14 @@ import React from 'react';
 import './BlogCard.css'
 import { Link } from 'react-router-dom';
 
-const BlogCard = () => {
+const BlogCard = (props) => {
+    const {grid} = props
+    console.log(grid)
     return (
-        <div className='col-3'>
+        <div className={` ${grid===3 ? `gr-6` : 'col-3'}`}>
             <div className="blog-card">
                 <div className="card-image">
-                    <img className='img-fluid' src={require('../../assets/images/blog-1.jpg')} alt="" />
+                    <img className='img-fluid w-100' src={require('../../../assets/images/blog-1.jpg')} alt="" />
                 </div>
                 <div className="blog-content">
                     <p className='date'>1 Dec, 2022</p>

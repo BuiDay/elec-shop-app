@@ -17,9 +17,9 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col-7">
-                            <div class="input-group py-2">
+                            <div className="input-group py-2">
                                 <input  type="text" 
-                                        class="form-control" 
+                                        className="form-control" 
                                         placeholder='Input your email...'
                                 />
                                 <span className='input-group-text py-2 text-white'>

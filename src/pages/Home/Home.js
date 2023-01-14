@@ -16,8 +16,9 @@ import Camera from '../../assets/images/camera.jpg'
 import Headphone from '../../assets/images/headphone.jpg'
 import Speaker from '../../assets/images/speaker.jpg'
 import Laptop from '../../assets/images/laptop.jpg'
-import BlogCard from '../../components/BlogCard/BlogCard';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import BlogCard from '../../components/Home/BlogCard/BlogCard';
+import ProductCard from '../../components/Home/ProductCard/ProductCard';
+import SpecialProduct from '../../components/Home/SpecialProduct/SpecialProduct';
 
 
 const Home = () => {
@@ -201,11 +202,99 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className='blog-wrapper home-wrapper-2 py-5'>
+            <section className='featured-wrapper home-wrapper-2 py-5'>
                 <div className="container-xxl">
                     <div className="row">
                         <div className="col-12">
                             <h3 className='section-heading'>Featured Collection</h3>
+                        </div>
+                        <ProductCard/>
+                        <ProductCard/>
+                        <ProductCard/>
+                        <ProductCard/>
+                    </div>
+                </div>
+            </section>
+
+            <section className='famous-wrapper home-wrapper-2 py-5'>
+                <div className="container-xxl">
+                    <div className="row pt-4">
+                        <div className="col-3">
+                            <div className="famous-card p-3 bg-dark">
+                                <div className="famous-content mb-3">
+                                    <h5 className='text-white'>Big Screen</h5>
+                                    <h6 className='text-white'>Smart Watch Series 8</h6>
+                                    <p className='text-white'>Form $399</p>
+                                </div>
+                                <img className='img-fluid' src={require('../../assets/images/apple-watch-series-8.png')} alt="" />
+                            </div>
+                        </div>
+
+                        <div className="col-3">
+                            <div className="famous-card p-3">
+                                <div className="famous-content mb-3">
+                                    <h5>Big Screen</h5>
+                                    <h6>Smart Watch Series 8</h6>
+                                    <p>Form $399</p>
+                                </div>
+                                <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                            </div>
+                        </div>
+
+                        <div className="col-3">
+                            <div className="famous-card p-3">
+                                <div className="famous-content mb-3">
+                                    <h5>Big Screen</h5>
+                                    <h6>Smart Watch Series 8</h6>
+                                    <p>Form $399</p>
+                                </div>
+                                <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                            </div>
+                        </div>
+
+                        <div className="col-3">
+                            <div className="famous-card p-3">
+                                <div className="famous-content mb-3">
+                                    <h5>Big Screen</h5>
+                                    <h6>Smart Watch Series 8</h6>
+                                    <p>Form $399</p>
+                                </div>
+                                <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='special-wrapper home-wrapper-2 py-5'>
+                <div className="container-xxl">
+                    <div className="row">
+                        <div className="col-12">
+                            <h3 className='section-heading'>Special Products</h3>
+                        </div>
+                        
+                    </div>
+                    <div className="row">
+                        <SpecialProduct/>
+                        <SpecialProduct/>
+                        <SpecialProduct/>
+                    </div>
+                </div>
+            </section>
+
+            <section className='popular-wrapper home-wrapper-2 py-5'>
+                <div className="container-xxl">
+                    <div className="row">
+                        <div className="col-12">
+                            <h3 className='section-heading'>Our Popular Products</h3>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-2">
+                            <div className="card"></div>
+                        </div>
+                        <div className="col-2">
+                            <div className="card"></div>
                         </div>
                         <ProductCard/>
                         <ProductCard/>

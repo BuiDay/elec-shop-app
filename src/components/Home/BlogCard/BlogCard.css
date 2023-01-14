@@ -1,6 +1,7 @@
 .blog-card{
     background-color: white;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .blog-card img{
