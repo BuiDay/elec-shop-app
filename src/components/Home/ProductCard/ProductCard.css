@@ -3,6 +3,7 @@
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 0 10px #0000001a;
 }
 
 .product-card:hover .action-bar{

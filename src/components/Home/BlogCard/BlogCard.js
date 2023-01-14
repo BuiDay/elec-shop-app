@@ -7,7 +7,7 @@ const BlogCard = (props) => {
     console.log(grid)
     return (
         <div className={` ${grid===3 ? `gr-6` : 'col-3'}`}>
-            <div className="blog-card">
+            <Link to="/blog/12" className="blog-card">
                 <div className="card-image">
                     <img className='img-fluid w-100' src={require('../../../assets/images/blog-1.jpg')} alt="" />
                 </div>
@@ -19,11 +19,11 @@ const BlogCard = (props) => {
                     <p className="desc">
                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ullam laudantium asperiores tempore dolores blanditiis.
                     </p>
-                    <Link to='/' className='button blog-btn'>
+                    <Link to='/blog/12' className='button blog-btn'>
                         Read More
                     </Link>
                 </div>
-            </div>
+            </Link>
         </div>
     );
 };

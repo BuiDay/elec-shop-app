@@ -1,0 +1,13 @@
+.wishlist-products-card{
+    background-color: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+.wishlist-products-card .cross{
+    top:15px;
+    right: 15px;
+    width: 20px;
+    cursor: pointer;
+    padding: 3px;
+}

@@ -28,7 +28,7 @@ const Header = () => {
                         <div className="row align-items-center">
                             <div className="col-2">
                                 <h1>
-                                    <Link className='text-white'>NHAT BUI</Link>
+                                    <Link to="/" className='text-white'>NHAT BUI</Link>
                                 </h1>
                             </div>
                             <div className="col-5">
@@ -51,13 +51,13 @@ const Header = () => {
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link className='d-flex align-items-center gap-10 text-white wishlist'>
+                                        <Link to='wishlist' className='d-flex align-items-center gap-10 text-white wishlist'>
                                             <img src={Wishlist} alt="" />
                                             <p>Wishlist Products</p>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link className='d-flex align-items-center gap-10 text-white user'>
+                                        <Link to='login' className='d-flex align-items-center gap-10 text-white user'>
                                             <img src={User} alt="" />
                                             <p>Log in my account</p>
                                         </Link>
@@ -89,7 +89,7 @@ const Header = () => {
                                     <div className="d-flex align-items-center gap-15">
                                         <NavLink to="/">Home</NavLink>
                                         <NavLink to="ourstore">Our Store</NavLink>
-                                        <NavLink to="blog">Blogs</NavLink>
+                                        <NavLink to="blogs">Blogs</NavLink>
                                         <NavLink to="contact">Contact</NavLink>
                                     </div>
                                 </div>
