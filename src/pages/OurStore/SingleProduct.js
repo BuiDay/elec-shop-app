@@ -4,9 +4,18 @@ import Breadcrumb from "../../components/Common/Breadcrumb/Breadcrumb";
 import Meta from "../../components/Common/Meta/Meta";
 import ProductCard from '../../components/Home/ProductCard/ProductCard';
 import ReactStars from 'react-stars'
+import ReactImageZoom from 'react-image-zoom';
+import Watch from '../../assets/images/watch-41-alum-silver.jpg'
+import Color from '../../components/Common/Color/Color';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { TbGitCompare  } from 'react-icons/tb';
 
 const SingleProduct = () => {
+    const props = {width: 600, height: 500, zoomWidth: 500, img: Watch};
+    console.log(props)
     const [orderedProduct, setOrderedProduct] = useState(true)
+
+    
     return (
         <>
             <Meta title={"Product"} />
@@ -16,10 +25,137 @@ const SingleProduct = () => {
                     <div className="row">
                         <div className="col-6">
                             <div className="main-product-image">
-
+                                <div>
+                                    <ReactImageZoom {...props} />
+                                </div>
+                            </div>
+                            <div className="other-product-images d-flex flex-wrap gap-15">
+                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra-2.png')} alt="" /></div>
+                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra.png')} alt="" /></div>
+                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra-2.png')} alt="" /></div>
+                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra.png')} alt="" /></div>
                             </div>
                         </div>
-                        <div className="col-6"></div>
+                        <div className="col-6">
+                            <div className="main-product-details">
+                                <div className="border-bottom">
+                                    <h3 className='title'>
+                                        Lorem ipsum dolor, sit amet consectetur.
+                                    </h3>
+                                </div>
+                                <div className="border-bottom py-3">
+                                    <p className="price">$100</p>
+                                    <div className='d-flex gap-10 align-items-center'>
+                                        <ReactStars
+                                            count={5}
+                                            size={24}
+                                            value={4}
+                                            edit={false}
+                                            color2={'#ffd700'} />
+                                        <p className='mb-0 t-review'>(2 Reviews)</p>
+                                    </div>
+                                    <a href="#review" className='t-review'>Write a Review</a>
+                                </div>
+                                <div className="border-bottom">
+                                    <div className='d-flex gap-10 align-items-center my-2'>
+                                        <h3 className='product-heading'>Type:</h3>
+                                        <p className='product-info'>Watch</p>
+                                    </div>
+                                    <div className='d-flex gap-10 align-items-center my-2'>
+                                        <h3 className='product-heading'>Brand:</h3>
+                                        <p className='product-info'>Apple</p>
+                                    </div>
+                                    <div className='d-flex gap-10 align-items-center my-2'>
+                                        <h3 className='product-heading'>Tags:</h3>
+                                        <p className='product-info'>Watch</p>
+                                    </div>
+                                    <div className='d-flex gap-10 align-items-center my-2'>
+                                        <h3 className='product-heading'>Availablity:</h3>
+                                        <p className='product-info'>In Stock</p>
+                                    </div>
+                                    <div className='d-flex gap-10 flex-column my-2'>
+                                        <h3 className='product-heading'>Size:</h3>
+                                       <div className="d-flex flex-wrap gap-15">
+                                        <span className="badge border border-1 bg-white text-dark border-secondary">S</span>
+                                        <span className="badge border border-1 bg-white text-dark border-secondary">M</span>
+                                        <span className="badge border border-1 bg-white text-dark border-secondary">L</span>
+                                       </div>
+                                    </div>
+
+                                    <div className='d-flex gap-10 flex-column my-2'>
+                                        <h3 className='product-heading'>Colors:</h3>
+                                       <Color />
+                                    </div>
+
+                                    <div className='d-flex gap-10 align-items-center my-3'>
+                                        <h3 className='product-heading'>Quantity:</h3>
+                                        <div>
+                                            <input type="number" 
+                                            name=''
+                                            defaultValue={1}
+                                            min={1}
+                                            max={10}
+                                            className='form-control'
+                                            style={{width:"60px",height:"30px",textAlign:"center"}}
+                                            />
+                                        </div>
+                                       
+                                    </div>
+                                    <div className="d-flex gap-15 align-items-center pb-3">
+                                        <button className='button border-0'>Add to cart</button>
+                                        <button className='button border-0 orange-color'>Buy it now</button>
+                                    </div>
+
+                                    <div className='d-flex gap-15 align-items-center mb-4'>
+                                        <div>
+                                            <a href="">
+                                                <TbGitCompare className='fs-5 me-2' />
+                                                Add to Compare
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="">
+                                                <AiOutlineHeart className='fs-5 me-2' />
+                                                Add to Wishlist
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,7 +203,7 @@ const SingleProduct = () => {
                                         )
                                     }
                                 </div>
-                                <div className="review-form py-4">
+                                <div className="review-form py-4" id="review">
                                     <h4>Write a review</h4>
                                     <form action="" className='d-flex flex-column gap-20'>
                                         <div>
