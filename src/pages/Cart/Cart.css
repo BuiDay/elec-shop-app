@@ -1,0 +1,55 @@
+.cart-header,
+.cart-data{
+    border-bottom: 1px solid #eaeaea;
+}
+
+.cart-header h4{
+    font-size: 13px;
+    color: var(--color-777777);
+}
+
+.cart-col-1{
+    width: 40%;
+}
+
+.cart-col-1 p{
+    color: var(--color-777777);
+    font-size: 16px;
+}
+
+.cart-col-2{
+    width: 10%;
+}
+
+.cart-col-3{
+    width: 15%;
+}
+
+.cart-col-4{
+    width: 15%;
+}
+
+.cart-data h5.price{
+    font-size: 16px;
+    color: var(--color-1c1c1b);
+}
+
+
+.cart-wrapper .button{
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.cart-wrapper .icon-del{
+    background-color: var( --color-232f3e);
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cart-wrapper .icon-del svg{
+    color: white ;
+}

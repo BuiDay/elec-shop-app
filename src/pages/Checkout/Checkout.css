@@ -1,0 +1,14 @@
+.checkout-wrapper form .button{
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.total{
+    font-size: 16px;
+    color:var(--color-1c1c1b);
+}
+
+.total-price{
+    font-size: 16px;
+    color:var(--color-777777);
+}

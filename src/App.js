@@ -19,22 +19,24 @@ import RefundPolicy from './pages/RefundPolicy/RefundPolicy';
 import ShippingPolicy from './pages/ShippingPolicy/ShippingPolicy';
 import Conditions from './pages/Conditions/Conditions';
 import SingleProduct from './pages/OurStore/SingleProduct';
+import Cart from './pages/Cart/Cart';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Home />}/>
-          <Route path='about' element = {<About />}/>
-          <Route path='contact' element = {<Contact />}/>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home/>}/>
+          <Route path='about' element = {<About/>}/>
+          <Route path='contact' element = {<Contact/>}/>
           <Route path='ourstore' element = {<OurStore/>}/>
           <Route path='product/:id' element = {<SingleProduct/>}/>
           <Route path='blogs' element = {<Blog/>}/>
           <Route path='blog/:id' element = {<SingleBlog/>}/>
           <Route path='compare-products' element = {<CompareProducts/>}/>
           <Route path='wishlist' element = {<Wishlist/>}/>
-          <Route path='login' element = {<Login />}/>
+          <Route path='login' element = {<Login/>}/>
           <Route path='reset-password' element = {<Forgotpassword/>}/>
           <Route path='register' element = {<Register/>}/>
           <Route path='comfirm-password' element = {<ResetPassword />}/>
@@ -42,6 +44,8 @@ function App() {
           <Route path='refund-policy' element = {<RefundPolicy />}/>
           <Route path='shipping-policy' element = {<ShippingPolicy />}/>
           <Route path='conditions' element = {<Conditions />}/>
+          <Route path='cart' element = {<Cart/>}/>
+          <Route path='checkout' element = {<Checkout/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

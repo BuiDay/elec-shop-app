@@ -45,25 +45,25 @@ const Header = () => {
                             <div className="col-5">
                                 <div className="header-top-upper d-flex align-items-center justify-between-content">
                                     <div>
-                                        <Link to='compare-products' className='d-flex align-items-center gap-10 text-white compare-products'>
+                                        <Link to='/compare-products' className='d-flex align-items-center gap-10 text-white compare-products'>
                                             <img src={Compare} alt="" />
                                             <p>Compare Products</p>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link to='wishlist' className='d-flex align-items-center gap-10 text-white wishlist'>
+                                        <Link to='/wishlist' className='d-flex align-items-center gap-10 text-white wishlist'>
                                             <img src={Wishlist} alt="" />
                                             <p>Wishlist Products</p>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link to='login' className='d-flex align-items-center gap-10 text-white user'>
+                                        <Link to='/login' className='d-flex align-items-center gap-10 text-white user'>
                                             <img src={User} alt="" />
                                             <p>Log in my account</p>
                                         </Link>
                                     </div>
                                     <div>
-                                        <Link className='d-flex align-items-center gap-10 text-white'>
+                                        <Link to='/cart' className='d-flex align-items-center gap-10 text-white'>
                                             <img src={Cart} alt="" />
                                             <div className='d-flex flex-column'>
                                                 <span className='badge bg-white text-dark'>0</span>
