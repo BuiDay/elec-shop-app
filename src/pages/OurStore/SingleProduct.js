@@ -32,7 +32,7 @@ const SingleProduct = () => {
                             <div className="other-product-images d-flex flex-wrap gap-15">
                                 <div><img className='img-fluid' src={require('../../assets/images/watch-ultra-2.png')} alt="" /></div>
                                 <div><img className='img-fluid' src={require('../../assets/images/watch-ultra.png')} alt="" /></div>
-                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra-2.png')} alt="" /></div>
+                                <div><img className='img-fluid' src={require('../../assets/images/watch-2.jpg')} alt="" /></div>
                                 <div><img className='img-fluid' src={require('../../assets/images/watch-ultra.png')} alt="" /></div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@ const SingleProduct = () => {
                             <div className="main-product-details">
                                 <div className="border-bottom">
                                     <h3 className='title'>
-                                        Lorem ipsum dolor, sit amet consectetur.
+                                        Apple watch series 6
                                     </h3>
                                 </div>
                                 <div className="border-bottom py-3">

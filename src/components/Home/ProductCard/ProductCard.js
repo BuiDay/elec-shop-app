@@ -9,7 +9,7 @@ import Wish from '../../../assets/images/wish.svg'
 
 const ProductCard = (props) => {
     const location = useLocation()
-    const {grid} = props
+    const {grid,img} = props
     return (
         <div className={`${location.pathname=="/ourstore" ? `gr-${grid}`:"col-3"}`}>
             <Link to='/product/123' className="product-card position-relative">
@@ -19,7 +19,7 @@ const ProductCard = (props) => {
                     </Link>
                 </div>
                 <div className="product-image mb-3">
-                    <img className='img-fluid' src={require('../../../assets/images/watch-ultra-2.png')} alt="" />
+                    <img className='img-fluid' src={img} alt="" />
                     <img className='img-fluid' src={require('../../../assets/images/watch-ultra.png')} alt="" />
                 </div>
                 <div className='product-details'>

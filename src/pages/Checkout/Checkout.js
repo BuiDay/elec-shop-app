@@ -92,8 +92,8 @@ const Checkout = () => {
                                         <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
                                     </div>
                                     <div className='w-75'>
-                                        <p className='total'>Lorem ipsum dolor sit consectetur!</p>
-                                        <p className='total-price'>Size: dsf</p>
+                                        <p className='total'>Apple watch series 6</p>
+                                        <p className='total-price'>Size: 44mm</p>
                                     </div>
                                </div>
                                 <div className='w-25 text-end'>
@@ -105,29 +105,29 @@ const Checkout = () => {
                                <div className='w-75 d-flex gap-20'>
                                     <div className='w-25 border position-relative'>
                                         <span style={{top:"-10px", right:"-10px"}} className="badge bg-secondary text-white rounded-circle position-absolute p-2">1</span>
-                                        <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                                        <img className='img-fluid' src={require('../../assets/images/airmac.jpg')} alt="" />
                                     </div>
                                     <div className='w-75'>
-                                        <p className='total'>Lorem ipsum dolor sit consectetur!</p>
-                                        <p className='total-price'>Size: dsf</p>
+                                        <p className='total'>Macbook pro 2</p>
+                                        <p className='total-price'>Size: 15ich</p>
                                     </div>
                                </div>
                                 <div className='w-25 text-end'>
-                                    <h5 className='total-price'>$ 100</h5>
+                                    <h5 className='total-price'>$ 1000</h5>
                                 </div>
                             </div>
                            
                             <div className='d-flex justify-content-between align-items-center py-4 border-top'>
                                 <p className='total'>Subtotal</p>
-                                <p className='total-price'>$ 1000</p> 
+                                <p className='total-price'>$ 1100</p> 
                             </div>
                             <div className='d-flex justify-content-between align-items-center pb-4 border-bottom'>
                                 <p className='total'>Shipping</p>
-                                <p className='total-price'>$ 1000</p>
+                                <p className='total-price'>$ 5</p>
                             </div>
                             <div className='d-flex justify-content-between align-items-cente py-3'>
                                 <h4 className='total'>Total</h4>
-                                <h5 className='total-price'>$ 1000</h5>
+                                <h5 className='total-price'>$ 1105</h5>
                             </div>
                         </div>
                     </div>

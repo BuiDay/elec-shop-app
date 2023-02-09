@@ -85,22 +85,13 @@ const OurStore = () => {
                                     <h5 className='sub-title'>Colors</h5>
                                     <div>
                                         <ul className='colors ps-0'>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
+                                            <li style={{background:"yellow"}}></li>
+                                            <li style={{background:"blue"}}></li>
+                                            <li style={{background:"green"}}></li>
+                                            <li style={{background:"gray"}}></li>
+                                            <li style={{background:"purple"}}></li>
+                                            <li style={{background:"black"}}></li>
+                                            <li style={{background:"cyan"}}></li>
                                             <li></li>
                                         </ul>
                                     </div>
@@ -213,17 +204,11 @@ const OurStore = () => {
                             </div>
 
                             <div className="products-list pb-5 d-flex flex-wrap gap-10">
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
+                                <ProductCard grid={grid} img={require("../../assets/images/watch.jpg")} />
+                                <ProductCard grid={grid} img={require("../../assets/images/laptop.jpg")}/>
+                                <ProductCard grid={grid} img={require("../../assets/images/acc.jpg")}/>
+                                <ProductCard grid={grid} img={require("../../assets/images/tab.jpg")}/>
+                                <ProductCard grid={grid} img={require("../../assets/images/png.monster-209.png")}/>
                                 <ProductCard grid={grid} />
                             </div>
                         </div>

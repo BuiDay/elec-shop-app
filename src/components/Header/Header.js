@@ -5,6 +5,7 @@ import Compare from '../../assets/images/compare.svg'
 import Wishlist from '../../assets/images/wishlist.svg'
 import User from "../../assets/images/user.svg"
 import Cart from "../../assets/images/cart.svg"
+import Menu from "../../assets/images/menu.svg"
 
 
 const Header = () => {
@@ -82,8 +83,15 @@ const Header = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="menu-bottom d-flex align-items-center">
-                                <div>
-                                    
+                                <div className='me-5'>
+                                    <div className='title-categories' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src={Menu} className='img fluid me-1' alt="" />
+                                        Shop categories
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <Link class="dropdown-item" to="/">View Profile</Link>
+                                        <Link class="dropdown-item" to="/">Sign out</Link>
+                                    </div>
                                 </div>
                                 <div className='menu-links'>
                                     <div className="d-flex align-items-center gap-15">

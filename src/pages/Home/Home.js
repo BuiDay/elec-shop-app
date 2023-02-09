@@ -45,8 +45,8 @@ const Home = () => {
                                     <img src={CatBanner_1} alt="" 
                                         className='img-fluid rounded-3'/>
                                     <div className="small-banner-content position-absolute">
-                                        <h4>SUPERCHARNGED FOR PROS.</h4>
-                                        <h5>IPhone 13 Pro Max</h5>
+                                        <h4>BEST SALE</h4>
+                                        <h5>Laptops Max</h5>
                                         <p className=''>Form 1000$ or 2000$</p>
                                     </div>
                                 </div>
@@ -55,8 +55,8 @@ const Home = () => {
                                     <img src={CatBanner_2} alt="" 
                                         className='img-fluid rounded-3'/>
                                     <div className="small-banner-content position-absolute">
-                                        <h4>SUPERCHARNGED FOR PROS.</h4>
-                                        <h5>IPhone 13 Pro Max</h5>
+                                        <h4>NEW ARRIVAL</h4>
+                                        <h5>Buy Ipad Air</h5>
                                         <p className=''>Form 1000$ or 2000$</p>
                                     </div>
                                 </div>
@@ -65,8 +65,8 @@ const Home = () => {
                                     <img src={CatBanner_3} alt="" 
                                         className='img-fluid rounded-3'/>
                                     <div className="small-banner-content position-absolute">
-                                        <h4>SUPERCHARNGED FOR PROS.</h4>
-                                        <h5>IPhone 13 Pro Max</h5>
+                                        <h4>15% OFF</h4>
+                                        <h5>Smartwatch 7</h5>
                                         <p className=''>Form 1000$ or 2000$</p>
                                     </div>
                                 </div>
@@ -75,8 +75,8 @@ const Home = () => {
                                     <img src={CatBanner_4} alt="" 
                                         className='img-fluid rounded-3'/>
                                     <div className="small-banner-content position-absolute">
-                                        <h4>SUPERCHARNGED FOR PROS.</h4>
-                                        <h5>IPhone 13 Pro Max</h5>
+                                        <h4>Free ENGRAVING</h4>
+                                        <h5>Headphone 6</h5>
                                         <p className=''>Form 1000$ or 2000$</p>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Camera</h6>
-                                        <p>10 Items</p>
+                                        <p>12 Items</p>
                                     </div>
                                     <img src={Camera} alt="" />
                                 </div>
@@ -144,7 +144,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Headphone</h6>
-                                        <p>10 Items</p>
+                                        <p>20 Items</p>
                                     </div>
                                     <img src={Headphone} alt="" />
                                 </div>
@@ -152,7 +152,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Speaker</h6>
-                                        <p>10 Items</p>
+                                        <p>4 Items</p>
                                     </div>
                                     <img src={Speaker} alt="" />
                                 </div>
@@ -160,7 +160,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Laptop</h6>
-                                        <p>10 Items</p>
+                                        <p>16 Items</p>
                                     </div>
                                     <img src={Laptop} alt="" />
                                 </div>
@@ -168,7 +168,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Camera</h6>
-                                        <p>10 Items</p>
+                                        <p>5 Items</p>
                                     </div>
                                     <img src={Camera} alt="" />
                                 </div>
@@ -176,7 +176,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Headphone</h6>
-                                        <p>10 Items</p>
+                                        <p>17 Items</p>
                                     </div>
                                     <img src={Headphone} alt="" />
                                 </div>
@@ -184,7 +184,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Speaker</h6>
-                                        <p>10 Items</p>
+                                        <p>4 Items</p>
                                     </div>
                                     <img src={Speaker} alt="" />
                                 </div>
@@ -192,7 +192,7 @@ const Home = () => {
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
                                         <h6>Laptop</h6>
-                                        <p>10 Items</p>
+                                        <p>14 Items</p>
                                     </div>
                                     <img src={Laptop} alt="" />
                                 </div>

@@ -1,0 +1,743 @@
+[
+  {
+    "_id": "cd8d66b8-b94e-4c8a-850f-865559469414",
+    "colId": "c58e8546-7c9c-43cb-a809-c73f46a6faec",
+    "containerId": "",
+    "name": "Create product",
+    "url": "http://localhost:4000/api/product",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-01-31T12:59:45.174Z",
+    "modified": "2023-01-31T13:04:36.133Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n   \"title\":\"Apple Watch 4\",\n    \"description\":\"Node.js E-Commerce App with REST API: Let's Build a Real-Life\",\n    \"price\":100,\n    \"category\":\"laptop\",\n    \"brand\":\"Apple\",\n    \"quantity\":100,\n    \"color\":\"yellow\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d01f7c35-8c97-44ec-8ac0-9a579f950bd3",
+    "colId": "c58e8546-7c9c-43cb-a809-c73f46a6faec",
+    "containerId": "",
+    "name": "Get all product",
+    "url": "http://localhost:4000/api/product",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-01-31T13:05:30.019Z",
+    "modified": "2023-01-31T15:46:38.791Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "brand",
+        "value": "Sony",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "category",
+        "value": "laptop",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "sort",
+        "value": "122",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "price[gte]",
+        "value": "100",
+        "isDisabled": true,
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "9e7fa406-e6a2-4d9d-994e-decd711dd2da",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Register user",
+    "url": "http://localhost:4000/api/user/register",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-01-31T16:17:46.013Z",
+    "modified": "2023-02-02T17:48:25.451Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"firstName\":\"Thuy\",\n  \"lastName\":\"Na\",\n  \"email\":\"thuyna@gmail.com\",\n  \"mobile\":\"0933804745\",\n  \"password\":\"12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a241b641-bada-4c7f-809c-a1210011c5fe",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Login",
+    "url": "http://localhost:4000/api/user/login",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-01-31T17:30:05.386Z",
+    "modified": "2023-02-02T13:20:25.649Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": ""
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"buiday@gmail.com\",\n  \"password\":\"1234\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d0b51f6a-3f43-459a-addf-6542a5c83c32",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Change password",
+    "url": "http://localhost:4000/api/user/password",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-01-31T17:33:08.580Z",
+    "modified": "2023-01-31T17:48:21.982Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTE4NjIzMywiZXhwIjoxNjc1MjcyNjMzfQ.EkiFKNuNxupYNodmYpVSK3Xg_BVjfV9ziSqtExlSHpU"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"password\":\"1234\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c6bbb6db-6824-4cc4-987b-abf39f979125",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Forgot password",
+    "url": "http://localhost:4000/api/user/forgot-password",
+    "method": "POST",
+    "sortNum": 70000,
+    "created": "2023-01-31T18:21:27.780Z",
+    "modified": "2023-01-31T18:47:34.853Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"buivanduynhat@gmail.com\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "34e17d6b-2c64-4e76-8408-0134393ea4d9",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Reset password",
+    "url": "http://localhost:4000/api/user/reset-password/a69985fa5479074ce77f9674b99488599aa637285b13a010ad60b0f2733949a2",
+    "method": "POST",
+    "sortNum": 80000,
+    "created": "2023-01-31T18:57:27.397Z",
+    "modified": "2023-01-31T19:11:11.927Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"password\":\"1234\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0086c841-9d4c-489f-8826-00cb78a08760",
+    "colId": "7b217082-44ca-4d65-8482-f72368994688",
+    "containerId": "",
+    "name": "Create category",
+    "url": "http://localhost:4000/api/category",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-01T09:41:44.562Z",
+    "modified": "2023-02-01T09:53:16.043Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Headphone\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6f837716-741a-4b1b-9812-5c8e654ce7f9",
+    "colId": "7b217082-44ca-4d65-8482-f72368994688",
+    "containerId": "",
+    "name": "Update category",
+    "url": "http://localhost:4000/api/category/63da368bd8757b94fa67682f",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2023-02-01T10:09:03.408Z",
+    "modified": "2023-02-01T10:20:48.306Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Head phone\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b56971a7-845a-4f08-bd8a-ae2ca4f7d3b3",
+    "colId": "7b217082-44ca-4d65-8482-f72368994688",
+    "containerId": "",
+    "name": "Delete category",
+    "url": "http://localhost:4000/api/category/63da368bd8757b94fa67682f",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-02-01T10:14:03.158Z",
+    "modified": "2023-02-01T10:14:17.330Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "73c7ce86-dbe1-4290-8fdd-ca7392951239",
+    "colId": "7b217082-44ca-4d65-8482-f72368994688",
+    "containerId": "",
+    "name": "Get All",
+    "url": "http://localhost:4000/api/category",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-02-01T10:15:44.297Z",
+    "modified": "2023-02-01T10:15:53.552Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a2ca5604-4851-470b-962c-516eb5314634",
+    "colId": "7b217082-44ca-4d65-8482-f72368994688",
+    "containerId": "",
+    "name": "Get a ",
+    "url": "http://localhost:4000/api/category/63da3633c99437fd2cc75ea9",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-02-01T10:18:42.223Z",
+    "modified": "2023-02-01T10:22:07.824Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ee124234-51d7-4f3b-89f5-c869801df894",
+    "colId": "4f9dffb9-8a0e-4cdd-8b82-cbc0db928710",
+    "containerId": "",
+    "name": "Create brand",
+    "url": "http://localhost:4000/api/brand",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-01T10:46:23.106Z",
+    "modified": "2023-02-01T10:48:11.152Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Dell\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "fa0b37e4-8b2f-428d-8eab-107eee0571c8",
+    "colId": "4f9dffb9-8a0e-4cdd-8b82-cbc0db928710",
+    "containerId": "",
+    "name": "Update brand",
+    "url": "http://localhost:4000/api/brand/63da436b777b2ce36c57a2ce",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2023-02-01T10:46:23.107Z",
+    "modified": "2023-02-01T10:49:06.094Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Dell\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ba7e60ae-0b29-4688-8863-92524e3b4a90",
+    "colId": "4f9dffb9-8a0e-4cdd-8b82-cbc0db928710",
+    "containerId": "",
+    "name": "Delete category",
+    "url": "http://localhost:4000/api/brand/63da436b777b2ce36c57a2ce",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-02-01T10:46:23.108Z",
+    "modified": "2023-02-01T10:49:17.759Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "640d2c52-bc9d-44cb-b491-de7d2ac2b0ec",
+    "colId": "4f9dffb9-8a0e-4cdd-8b82-cbc0db928710",
+    "containerId": "",
+    "name": "Get All",
+    "url": "http://localhost:4000/api/brand",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-02-01T10:46:23.109Z",
+    "modified": "2023-02-01T10:49:34.162Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2668179a-e91b-45d5-a32f-edf302ba969e",
+    "colId": "4f9dffb9-8a0e-4cdd-8b82-cbc0db928710",
+    "containerId": "",
+    "name": "Get a ",
+    "url": "http://localhost:4000/api/brand/63da436194534237374f4ea4",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-02-01T10:46:23.110Z",
+    "modified": "2023-02-01T10:49:58.823Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ab8ca728-ad76-4d4b-b897-d766edcd112c",
+    "colId": "7fb3f8e4-02a6-4602-a00b-dc6de661d400",
+    "containerId": "",
+    "name": "Create blog category",
+    "url": "http://localhost:4000/api/blog-category",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-01T11:01:18.017Z",
+    "modified": "2023-02-01T11:02:59.386Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Token\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cea7eec9-85da-4e9b-afc3-93e50ee82a1b",
+    "colId": "7fb3f8e4-02a6-4602-a00b-dc6de661d400",
+    "containerId": "",
+    "name": "Update brand",
+    "url": "http://localhost:4000/api/blog-category/63da436b777b2ce36c57a2ce",
+    "method": "PUT",
+    "sortNum": 20000,
+    "created": "2023-02-01T11:01:18.019Z",
+    "modified": "2023-02-01T11:03:11.312Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Dell\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "85d943de-fced-4919-9de7-683753dd80a0",
+    "colId": "7fb3f8e4-02a6-4602-a00b-dc6de661d400",
+    "containerId": "",
+    "name": "Delete category",
+    "url": "http://localhost:4000/api/blog-category/63da436b777b2ce36c57a2ce",
+    "method": "DELETE",
+    "sortNum": 30000,
+    "created": "2023-02-01T11:01:18.020Z",
+    "modified": "2023-02-01T11:03:15.345Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "c72fb081-01b4-4555-bc2c-7209afb2bd7a",
+    "colId": "7fb3f8e4-02a6-4602-a00b-dc6de661d400",
+    "containerId": "",
+    "name": "Get All",
+    "url": "http://localhost:4000/api/blog-category",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2023-02-01T11:01:18.021Z",
+    "modified": "2023-02-01T11:03:19.570Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "266ee235-20a1-4456-934b-a818bde5717d",
+    "colId": "7fb3f8e4-02a6-4602-a00b-dc6de661d400",
+    "containerId": "",
+    "name": "Get a ",
+    "url": "http://localhost:4000/api/blog-category/63da436194534237374f4ea4",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2023-02-01T11:01:18.022Z",
+    "modified": "2023-02-01T11:03:26.917Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "19cc8fc4-3bbe-48e9-b1c6-e82c9c13656c",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Add wishlist",
+    "url": "http://localhost:4000/api/product/wishlist",
+    "method": "PUT",
+    "sortNum": 90000,
+    "created": "2023-02-01T16:27:00.217Z",
+    "modified": "2023-02-01T16:34:11.027Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTI0NTA4NiwiZXhwIjoxNjc1MzMxNDg2fQ.TnXqnFeVSZ1daCiGKcyuh1Hic75HlbotoDhVo4TkDkk"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"proId\":\"63d911d1778de3b80e5f951c\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "52e49cbe-86f1-4fe9-ad87-34f4951f0374",
+    "colId": "c58e8546-7c9c-43cb-a809-c73f46a6faec",
+    "containerId": "",
+    "name": "Rating",
+    "url": "http://localhost:4000/api/product/rating",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2023-02-01T16:53:45.266Z",
+    "modified": "2023-02-01T20:18:38.538Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTI3MTcwNCwiZXhwIjoxNjc1MzU4MTA0fQ.eLVpYGmv6J-cBoWUNcsfm6kyWznrkCJzvc-dm3CRWes"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"star\":\"6\",\n  \"proId\":\"63d911ae6c4a213699580ee7\",\n  \"comment\":\"option will be switched back to `false` by default in Mongoose\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f43330d8-68c4-40f7-a10e-fab592ae60d4",
+    "colId": "783c8e22-d08a-4364-ab19-27f1321f0c88",
+    "containerId": "",
+    "name": "Create coupon",
+    "url": "http://localhost:4000/api/coupon",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-01T17:46:22.074Z",
+    "modified": "2023-02-01T17:53:21.415Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"qreqwre\",\n  \"expiry\":\"2023-02-03T11:02:59.299Z\",\n  \"discount\":\"20\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d77a56e9-aada-4489-84e2-ddf588f09c03",
+    "colId": "c58e8546-7c9c-43cb-a809-c73f46a6faec",
+    "containerId": "",
+    "name": "Upload images",
+    "url": "http://localhost:4000/api/product/upload/63d911e4f3ba9d5988e3a536",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-02-02T06:57:59.106Z",
+    "modified": "2023-02-02T07:16:52.698Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTMyMTIyNywiZXhwIjoxNjc1NDA3NjI3fQ.EHxzvbDbHrHdyh5Ew7KF47fcDaI9Suc0jjRRqrixPtY"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "images",
+          "value": "..\\..\\elec-shop-app\\src\\assets\\images\\blog-1.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "6d4a02f7-ff0b-450c-9be6-d08653e40838",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Login admin",
+    "url": "http://localhost:4000/api/user/login-admin",
+    "method": "POST",
+    "sortNum": 100000,
+    "created": "2023-02-02T07:51:48.202Z",
+    "modified": "2023-02-08T20:17:24.816Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"buivanduynhat@gmail.com\",\n  \"password\":\"1234\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "09f98d08-3767-4680-962b-0aa34daf5113",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Get wishlist",
+    "url": "http://localhost:4000/api/user/wishlist",
+    "method": "GET",
+    "sortNum": 110000,
+    "created": "2023-02-02T08:36:52.191Z",
+    "modified": "2023-02-02T08:41:35.041Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTMyNzI4OSwiZXhwIjoxNjc1NDEzNjg5fQ.wx-FJxIKO7QchYjnPP-hl5rZb4gCiHZ6ziliQXrZWAE"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f6b6c673-9c0e-4c8d-9b14-0bad07927a7b",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Update address",
+    "url": "http://localhost:4000/api/user/address",
+    "method": "PUT",
+    "sortNum": 120000,
+    "created": "2023-02-02T12:21:01.617Z",
+    "modified": "2023-02-02T12:22:32.193Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTMyNzI4OSwiZXhwIjoxNjc1NDEzNjg5fQ.wx-FJxIKO7QchYjnPP-hl5rZb4gCiHZ6ziliQXrZWAE"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"address\":\"741 hung vuong, di linh, lam dong\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "fd76ea59-3e00-493b-8154-52336465a1b1",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Add to cart",
+    "url": "http://localhost:4000/api/user/cart",
+    "method": "POST",
+    "sortNum": 130000,
+    "created": "2023-02-02T12:41:20.566Z",
+    "modified": "2023-02-08T18:29:37.408Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4MDMwNywiZXhwIjoxNjc1OTY2NzA3fQ.IQ6VrcAr5TPdPalAC_owWimL9XhSoapqNiYMj6n3-AM"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"cart\":[\n      {\n        \"id\":\"63d911e4f3ba9d5988e3a536\",\n        \"count\":\"1\",\n        \"color\":\"red\"\n      },\n      {\n        \"id\":\"63d911dcaa84ced6c4608e1d\",\n        \"count\":\"1\",\n        \"color\":\"red\"\n      }\n    ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ae5436d6-7b43-413d-9ee1-efde8d4cae91",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Get card",
+    "url": "http://localhost:4000/api/user/cart",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-02-02T13:24:11.899Z",
+    "modified": "2023-02-02T13:24:31.303Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTM0NDAyNSwiZXhwIjoxNjc1NDMwNDI1fQ.2qwuCrN9v-e31ZzzAsmQfMgHnIOjJVdyUV9-lj41aQo"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0a296a72-432c-46c5-a1f4-3dc19093b3fa",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Apply coupon",
+    "url": "http://localhost:4000/api/user/cart/apply-coupon",
+    "method": "POST",
+    "sortNum": 150000,
+    "created": "2023-02-08T18:17:41.389Z",
+    "modified": "2023-02-08T19:14:18.146Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4MTIyMCwiZXhwIjoxNjc1OTY3NjIwfQ.IuZ9krKdY-_a_bRuuko7Wp97al-VH0BW7KbahiFYNaE"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"coupon\":\"QWERYX\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "70d79620-1afb-4061-9335-173ae1168383",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Cash order",
+    "url": "http://localhost:4000/api/user/cart/cash-order",
+    "method": "POST",
+    "sortNum": 160000,
+    "created": "2023-02-08T19:14:27.106Z",
+    "modified": "2023-02-08T19:16:48.048Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4MTIyMCwiZXhwIjoxNjc1OTY3NjIwfQ.IuZ9krKdY-_a_bRuuko7Wp97al-VH0BW7KbahiFYNaE"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"COD\":true,\n  \"couponApplied\":true\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f76ac23d-76f2-4509-b946-e0d20dda65a7",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Get order",
+    "url": "http://localhost:4000/api/user/order/get-order",
+    "method": "GET",
+    "sortNum": 170000,
+    "created": "2023-02-08T20:11:01.225Z",
+    "modified": "2023-02-08T20:25:48.782Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4NzQ0OSwiZXhwIjoxNjc1OTczODQ5fQ.XppR7UXUjA-7GZDT0wR_sQvyn_YDev4zXwjTAy8q9hQ"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a6f5558e-0db4-4a01-b08e-1e276353f1b2",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Update status",
+    "url": "http://localhost:4000/api/user/order/update-order/63e3f5964105cd93d2ed202f",
+    "method": "PUT",
+    "sortNum": 180000,
+    "created": "2023-02-08T20:31:57.557Z",
+    "modified": "2023-02-08T20:34:46.418Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTg4ODM2MCwiZXhwIjoxNjc1OTc0NzYwfQ.X3BX7GWZhuZnqImSxOh-q85IKuQtHqGyx6cKBOq8Vws"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"status\":\"Procesing\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
