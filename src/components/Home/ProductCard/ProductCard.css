@@ -7,7 +7,7 @@
 }
 
 .product-card:hover .action-bar{
-   right: 23px;
+   right: 7px;
 }
 
 .product-card .product-details h6{
@@ -41,11 +41,13 @@
 }
 
 .wishlist-icon {
-    right: 24px;
+    top:0px;
+    right: 8px;
 }
 
 .product-card .product-image{
     height: 180px;
+    width:180px;
     transition: 0.4s;
 }
 

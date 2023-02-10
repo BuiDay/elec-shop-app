@@ -85,6 +85,10 @@ ul li{
   width:32%;
 }
 
+.error{
+  color:red;
+}
+
 .card-wrapper{
   background-color: white;
   box-shadow: 0 0 10px #0000001a;
@@ -197,4 +201,8 @@ footer .input-group-text{
 .days{
   white-space:nowrap ;
   color: #131921;
+}
+
+.displayName{
+  white-space:nowrap ;
 }

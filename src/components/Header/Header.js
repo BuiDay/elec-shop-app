@@ -1,14 +1,22 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useNavigate } from 'react-router-dom';
 import {BsSearch} from 'react-icons/bs'
 import Compare from '../../assets/images/compare.svg'
 import Wishlist from '../../assets/images/wishlist.svg'
 import User from "../../assets/images/user.svg"
 import Cart from "../../assets/images/cart.svg"
 import Menu from "../../assets/images/menu.svg"
-
+import ShowOnLogin, { ShowOnLogout } from "../../components/hiddenLink/hiddendLink"
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../features/auth/authSlice';
+import { useEffect } from 'react';
 
 const Header = () => {
+    const dispatch = useDispatch();
+    const {user} = useSelector(state=>state.auth)
+    const {cartTotalAmount,totalQuantity} = useSelector(state=>state.cart)
+    const navigate = useNavigate();
+
     return (
         <>
             <header className='header-top-stric py-3'>
@@ -57,18 +65,35 @@ const Header = () => {
                                             <p>Wishlist Products</p>
                                         </Link>
                                     </div>
-                                    <div>
-                                        <Link to='/login' className='d-flex align-items-center gap-10 text-white user'>
+                                    <ShowOnLogout>
+                                        <div>
+                                            <Link to='/login' className='d-flex align-items-center gap-10 text-white user'>
+                                                <img src={User} alt="" />
+                                                <p>Log in my account</p>
+                                            </Link>
+                                        </div>
+                                    </ShowOnLogout>
+                                    <ShowOnLogin>
+                                        <div className='d-flex align-items-center gap-10 text-white me-3'>
                                             <img src={User} alt="" />
-                                            <p>Log in my account</p>
-                                        </Link>
-                                    </div>
+                                            <div className=''>
+                                                <div className='' role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <p>Hi,</p>
+                                                    <p className='displayName'>{(user?.data?.firstName + " "+user?.data?.lastName) }</p>
+                                                </div>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <Link class="dropdown-item" to="/">View Profile</Link>
+                                                    <Link class="dropdown-item" onClick={()=>{dispatch(logout()); window.location.reload()}}>Sign out</Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ShowOnLogin>
                                     <div>
                                         <Link to='/cart' className='d-flex align-items-center gap-10 text-white'>
                                             <img src={Cart} alt="" />
                                             <div className='d-flex flex-column'>
-                                                <span className='badge bg-white text-dark'>0</span>
-                                                <p>500$</p>
+                                                <span className='badge bg-white text-dark'>{totalQuantity ? totalQuantity : "0"}</span>
+                                                <p>{cartTotalAmount ? cartTotalAmount :"0"}$</p>
                                             </div>
                                         </Link>
                                     </div>

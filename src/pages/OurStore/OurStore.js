@@ -8,14 +8,29 @@ import Gr2 from '../../assets/images/gr2.svg'
 import Gr3 from '../../assets/images/gr3.svg'
 import Gr4 from '../../assets/images/gr4.svg'
 import ProductCard from '../../components/Home/ProductCard/ProductCard';
+import { useDispatch, useSelector } from 'react-redux';
+import {getAllProducts} from "../../features/products/productsSlice"
+import { Link, useParams } from 'react-router-dom';
 
 const OurStore = () => {
+    const dispatch = useDispatch();
+    const [param, setParam ] = useState("")
+    const productsState = useSelector(state=>state.products.products)
     const [grid, setGrid] = useState(4);
-
     const getGrid = (i) =>{
         setGrid(i)
     }
+    
+    useEffect(()=>{
+        dispatch(getAllProducts())
+    },[])
 
+    const getParam = () => {
+        const hef = window.location.href;
+        const param = hef.split("?");
+        setParam(param[1])
+    }
+ 
     useEffect(()=>{
         const btnGrid = document.querySelectorAll(".filter-sort-grid img");
         btnGrid.forEach(item=>{
@@ -50,6 +65,7 @@ const OurStore = () => {
                                         <li>TV</li>
                                         <li>Camera</li>
                                         <li>Laptop</li>
+                                        <Link to="/ourstore?brand=Hp&category=laptop" onClick={getParam}>Hp</Link>
                                     </ul>
                                 </div>
                             </div>
@@ -204,12 +220,13 @@ const OurStore = () => {
                             </div>
 
                             <div className="products-list pb-5 d-flex flex-wrap gap-10">
-                                <ProductCard grid={grid} img={require("../../assets/images/watch.jpg")} />
-                                <ProductCard grid={grid} img={require("../../assets/images/laptop.jpg")}/>
-                                <ProductCard grid={grid} img={require("../../assets/images/acc.jpg")}/>
-                                <ProductCard grid={grid} img={require("../../assets/images/tab.jpg")}/>
-                                <ProductCard grid={grid} img={require("../../assets/images/png.monster-209.png")}/>
-                                <ProductCard grid={grid} />
+                              {
+                                    productsState?.map((item,index)=>{
+                                        return(
+                                            <ProductCard key={index} data={item} grid={grid}/>
+                                        )
+                                    })
+                              }
                             </div>
                         </div>
                     </div>

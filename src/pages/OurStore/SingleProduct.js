@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './OurStore.css'
 import Breadcrumb from "../../components/Common/Breadcrumb/Breadcrumb";
 import Meta from "../../components/Common/Meta/Meta";
@@ -9,13 +9,22 @@ import Watch from '../../assets/images/watch-41-alum-silver.jpg'
 import Color from '../../components/Common/Color/Color';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { TbGitCompare  } from 'react-icons/tb';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {getAProduct} from '../../features/products/productsSlice'
 
 const SingleProduct = () => {
-    const props = {width: 600, height: 500, zoomWidth: 500, img: Watch};
-    console.log(props)
+    const dispatch = useDispatch();
+    const {id} = useParams();
+    useEffect(()=>{
+        dispatch(getAProduct(id))
+    },[])
+    let img = [];
+    const productState = useSelector(state=>state.products?.product)
+    let {images} = productState
+    const props = {width: 600, height: 500, zoomWidth: 500, img:`${images&&images[0]?.url}`};
     const [orderedProduct, setOrderedProduct] = useState(true)
 
-    
     return (
         <>
             <Meta title={"Product"} />
@@ -30,21 +39,31 @@ const SingleProduct = () => {
                                 </div>
                             </div>
                             <div className="other-product-images d-flex flex-wrap gap-15">
-                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra-2.png')} alt="" /></div>
-                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra.png')} alt="" /></div>
-                                <div><img className='img-fluid' src={require('../../assets/images/watch-2.jpg')} alt="" /></div>
-                                <div><img className='img-fluid' src={require('../../assets/images/watch-ultra.png')} alt="" /></div>
+                                {
+                                    productState?.images?.map((item, index)=>{
+                                        return(
+                                            <div><img className='img-fluid' src={item?.url} alt="" /></div>
+                                        )
+                                    })
+                                }
+                                {
+                                    productState?.images?.map((item, index)=>{
+                                        return(
+                                            <div><img className='img-fluid' src={item?.url} alt="" /></div>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                         <div className="col-6">
                             <div className="main-product-details">
                                 <div className="border-bottom">
                                     <h3 className='title'>
-                                        Apple watch series 6
+                                       {productState?.title}
                                     </h3>
                                 </div>
                                 <div className="border-bottom py-3">
-                                    <p className="price">$100</p>
+                                    <p className="price">{productState?.price}$</p>
                                     <div className='d-flex gap-10 align-items-center'>
                                         <ReactStars
                                             count={5}
@@ -59,15 +78,15 @@ const SingleProduct = () => {
                                 <div className="border-bottom">
                                     <div className='d-flex gap-10 align-items-center my-2'>
                                         <h3 className='product-heading'>Type:</h3>
-                                        <p className='product-info'>Watch</p>
+                                        <p className='product-info'>{productState?.category}</p>
                                     </div>
                                     <div className='d-flex gap-10 align-items-center my-2'>
                                         <h3 className='product-heading'>Brand:</h3>
-                                        <p className='product-info'>Apple</p>
+                                        <p className='product-info'>{productState?.brand}</p>
                                     </div>
                                     <div className='d-flex gap-10 align-items-center my-2'>
                                         <h3 className='product-heading'>Tags:</h3>
-                                        <p className='product-info'>Watch</p>
+                                        <p className='product-info'>{productState?.category}</p>
                                     </div>
                                     <div className='d-flex gap-10 align-items-center my-2'>
                                         <h3 className='product-heading'>Availablity:</h3>
@@ -167,7 +186,7 @@ const SingleProduct = () => {
                         <h4 className='mb-4'>Description</h4>
                             <div className="bg-white p-3">                 
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptate suscipit harum autem id voluptatum nemo tempora odit inventore? Praesentium, placeat! Debitis ipsa totam animi obcaecati, sunt explicabo repudiandae molestias officiis quibusdam reprehenderit voluptas nisi excepturi atque voluptatem assumenda libero, possimus alias eum facere quae nostrum nesciunt neque. Perferendis tenetur perspiciatis pariatur maxime deserunt recusandae nobis et praesentium tempora error totam ad id atque placeat itaque, qui quia a earum officiis voluptatibus voluptatum sequi quos culpa? Laboriosam ullam dignissimos nesciunt est dicta laborum assumenda repellat nobis incidunt delectus cum accusantium labore, ea impedit aspernatur ex sapiente illo placeat ratione dolor.
+                                <div dangerouslySetInnerHTML={{ __html: `${productState?.description}`}} />
                                 </p>
                             </div>
                         </div>

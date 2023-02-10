@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const BlogCard = (props) => {
     const {grid} = props
-    console.log(grid)
     return (
         <div className={` ${grid===3 ? `gr-6` : 'col-3'}`}>
             <Link to="/blog/12" className="blog-card">

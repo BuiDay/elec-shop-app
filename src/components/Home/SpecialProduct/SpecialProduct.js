@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import CountdownTimer from '../../Countdown/CountdownTimer';
 
 const SpecialProduct = (props) => {
-    console.log(props.timer)
     return (
         <div className='col-4'>
             <div className="special-product-card">
