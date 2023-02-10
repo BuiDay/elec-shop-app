@@ -25,6 +25,7 @@ body{
 a{
   text-decoration: none;
   display: inline-block;
+  color:black;
 }
 
 h1,h2,p {
@@ -205,4 +206,8 @@ footer .input-group-text{
 
 .displayName{
   white-space:nowrap ;
+}
+
+.singleTitle{
+  font-size:18px;
 }

@@ -2,23 +2,46 @@ import React, { useEffect, useState } from 'react';
 import './Checkout.css'
 import Breadcrumb from "../../components/Common/Breadcrumb/Breadcrumb";
 import Meta from "../../components/Common/Meta/Meta";
-import { Link } from 'react-router-dom';
 import {BiArrowBack} from 'react-icons/bi'
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartApi,applyCoupon } from '../../features/cart/cartSlice';
+import {cashOrder} from '../../features/order/orderSlice'
+import {toast} from 'react-toastify';
+import { resetState } from '../../features/cart/cartSlice';
+import { Link, useNavigate } from 'react-router-dom';
+
 const Checkout = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [discount, setDiscout] = useState("")
     const cartsState = useSelector(state=>state.cart.carts)
     const getCartState = useSelector(state=>state.cart.getcart)
-    
+    const {isLoading, isError, isSuccess, message} = useSelector(state=>state.order)
+    useEffect(()=>{
+      if(isSuccess){
+          toast.success("Order successfully")
+          navigate("/");
+          dispatch(resetState())
+          localStorage.removeItem("carts");
+            localStorage.removeItem("totalQuantity");
+            localStorage.removeItem("cartTotalAmount");
+            window.location.reload()
+      }if(isError){
+          toast.error("Something went wrong!")
+          dispatch(resetState())
+      }
+    },[isLoading, isError, isSuccess, message])
+
     useEffect(()=>{
         dispatch(getCartApi())
-    
     },[])
 
     const applyCoupons = () =>{
         dispatch(applyCoupon({coupon:discount}))
+    }
+
+    const order = () =>{
+        dispatch(cashOrder())
     }
 
     return (
@@ -96,7 +119,7 @@ const Checkout = () => {
                                                 <BiArrowBack className='me-2' />
                                                 Return to Cart
                                             </Link>
-                                            <Link to="/cart" className='button'>Continue to Shipping</Link>
+                                            <div className='button' onClick={()=>order()}>Continue to Shipping</div>
                                         </div>
                                     </div>
                                 </form>

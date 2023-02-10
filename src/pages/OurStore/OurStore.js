@@ -20,17 +20,15 @@ const OurStore = () => {
     const getGrid = (i) =>{
         setGrid(i)
     }
+
+    const handleParam = (e) =>{
+        setParam(e)
+    }
     
     useEffect(()=>{
-        dispatch(getAllProducts())
-    },[])
+        dispatch(getAllProducts(param))
+    },[param])
 
-    const getParam = () => {
-        const hef = window.location.href;
-        const param = hef.split("?");
-        setParam(param[1])
-    }
- 
     useEffect(()=>{
         const btnGrid = document.querySelectorAll(".filter-sort-grid img");
         btnGrid.forEach(item=>{
@@ -61,17 +59,27 @@ const OurStore = () => {
                                 <h3 className="filter-tilte">Shop By Categories</h3>
                                 <div>
                                     <ul>
-                                        <li>Watch</li>
-                                        <li>TV</li>
-                                        <li>Camera</li>
-                                        <li>Laptop</li>
-                                        <Link to="/ourstore?brand=Hp&category=laptop" onClick={getParam}>Hp</Link>
+                                        <li><Link to="/ourstore" onClick={()=>setParam("")}>All</Link></li>
+                                        <li><Link to="/ourstore?category=Watch" onClick={()=>setParam("category=Watch")}>Watch</Link></li>
+                                        <li><Link to="/ourstore?category=TV" onClick={()=>setParam("category=TV")}>TV</Link></li>
+                                        <li><Link to="/ourstore?category=Camera" onClick={()=>setParam("category=Camera")}>Camera</Link></li>
+                                        <li><Link to="/ourstore?category=Laptop" onClick={()=>setParam("category=Laptop")}>Laptop</Link></li>
+                                        <li><Link to="/ourstore?category=Phone" onClick={()=>setParam("category=Phone")}>Phone</Link></li>
                                     </ul>
                                 </div>
                             </div>
                             <div className="filter-card mb-3">
                                 <h3 className="filter-tilte">Filter By</h3>
                                 <div>
+                                    <h5 className='sub-title'>Brand</h5>
+                                    <div>
+                                    <ul>
+                                        <li><Link to="/ourstore?brand=Apple" onClick={()=>setParam("brand=Apple")}>Apple</Link></li>
+                                        <li><Link to="/ourstore?brand=Dell" onClick={()=>setParam("brand=Dell")}>Dell</Link></li>
+                                        <li><Link to="/ourstore?brand=Samsung" onClick={()=>setParam("brand=Samsung")}>Samsung</Link></li>
+                                        <li><Link to="/ourstore?brand=Hp" onClick={()=>setParam("brand=Hp")}>Hp</Link></li>
+                                    </ul>
+                                </div>
                                     <h5 className='sub-title'>Availablity</h5>
                                     <div>
                                         <div className="form-check d-flex align-items-center">
@@ -195,13 +203,13 @@ const OurStore = () => {
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div className="d-flex align-items-center gap-10">
                                         <p className='mb-0'>Sort by:</p>
-                                        <select name="" id="" className='form-control form-select'>
+                                        <select name="" id="" className='form-control form-select' onChange={(e)=>handleParam(e.target.value)}>
                                             <option value="manual">Featured</option>
                                             <option value="best-selling">Best selling</option>
-                                            <option value="title-ascending">Alphabetically: A-Z</option>
-                                            <option value="title-descending">Alphabetically: Z-A</option>
-                                            <option value="price-ascending">Price: Low to High</option>
-                                            <option value="price-descending">Price: High to Low</option>
+                                            <option value="sort=brand">Alphabetically: A-Z</option>
+                                            <option value="sort=-brand">Alphabetically: Z-A</option>
+                                            <option value="sort=price">Price: Low to High</option>
+                                            <option value="sort=-price">Price: High to Low</option>
                                             <option value="created-ascending">Date: Old to New</option>
                                             <option value="created-descending">Date: New to Old</option>
                                         </select>

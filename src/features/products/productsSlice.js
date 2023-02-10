@@ -4,16 +4,16 @@ import productsService from "./productsService";
 
 const initialState = {
     products:[],
-    product:"",
+    product:[],
     isError:false,
     isLoading:false,
     isSuccess:false,
     message:"",
 }
 
-export const getAllProducts = createAsyncThunk("product/get-all",async(thunkAPI)=>{
+export const getAllProducts = createAsyncThunk("product/get-all",async(params,thunkAPI)=>{
     try{
-        return await productsService.getAllProduct()
+        return await productsService.getAllProduct(params)
     }catch(err){
        return thunkAPI.rejectWithValue(err)
     }
@@ -26,6 +26,15 @@ export const getAProduct = createAsyncThunk("product/get",async(id,thunkAPI)=>{
        return thunkAPI.rejectWithValue(err)
     }
 })
+
+export const ratingAProduct = createAsyncThunk("product/rating",async(value,thunkAPI)=>{
+    try{
+        return await productsService.ratingAProduct(value)
+    }catch(err){
+       return thunkAPI.rejectWithValue(err)
+    }
+})
+
 
 export const resetState = createAction("Reset_all")
 
@@ -55,10 +64,25 @@ export const productsSlice = createSlice({
         })
         .addCase(getAProduct.fulfilled,(state,action)=>{
             state.isLoading = false;
-            state.isSuccess = true;
+            state.isSuccess = false;
             state.product = action.payload.data;
         })
         .addCase(getAProduct.rejected,(state,action)=>{
+            state.isLoading = false;
+            state.isSuccess = false;
+            state.isError = true;
+            state.message = "Rejected";
+        })
+
+        .addCase(ratingAProduct.pending,(state)=>{
+            state.isLoading = true;
+        })
+        .addCase(ratingAProduct.fulfilled,(state,action)=>{
+            state.isLoading = false;
+            state.isSuccess = true;
+            state.product = action.payload.data;
+        })
+        .addCase(ratingAProduct.rejected,(state,action)=>{
             state.isLoading = false;
             state.isSuccess = false;
             state.isError = true;

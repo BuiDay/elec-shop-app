@@ -23,11 +23,11 @@
     "colId": "c58e8546-7c9c-43cb-a809-c73f46a6faec",
     "containerId": "",
     "name": "Get all product",
-    "url": "http://localhost:4000/api/product",
+    "url": "http://localhost:4000/api/product?price[gte]=900",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-01-31T13:05:30.019Z",
-    "modified": "2023-01-31T15:46:38.791Z",
+    "modified": "2023-02-10T22:33:49.699Z",
     "headers": [],
     "params": [
       {
@@ -38,20 +38,19 @@
       },
       {
         "name": "category",
-        "value": "laptop",
+        "value": "Watch",
         "isDisabled": true,
         "isPath": false
       },
       {
         "name": "sort",
-        "value": "122",
+        "value": "price",
         "isDisabled": true,
         "isPath": false
       },
       {
         "name": "price[gte]",
-        "value": "100",
-        "isDisabled": true,
+        "value": "900",
         "isPath": false
       }
     ],
@@ -85,11 +84,12 @@
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-01-31T17:30:05.386Z",
-    "modified": "2023-02-09T13:14:03.803Z",
+    "modified": "2023-02-10T17:17:08.685Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": ""
+        "value": "",
+        "isDisabled": true
       }
     ],
     "params": [],
@@ -480,17 +480,17 @@
     "method": "PUT",
     "sortNum": 30000,
     "created": "2023-02-01T16:53:45.266Z",
-    "modified": "2023-02-01T20:18:38.538Z",
+    "modified": "2023-02-10T20:04:06.300Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTI3MTcwNCwiZXhwIjoxNjc1MzU4MTA0fQ.eLVpYGmv6J-cBoWUNcsfm6kyWznrkCJzvc-dm3CRWes"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NjA1MjQwMCwiZXhwIjoxNjc2MTM4ODAwfQ.68x5FowoWXBG7s86Hi36mt1sIJsMOq9OZyPU9C8zvBs"
       }
     ],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"star\":\"6\",\n  \"proId\":\"63d911ae6c4a213699580ee7\",\n  \"comment\":\"option will be switched back to `false` by default in Mongoose\"\n}",
+      "raw": "{\n  \"star\":\"6\",\n  \"proId\":\"63e62ff27ac495b51ee7ad3e\",\n  \"comment\":\"option will be switched back to `false` by default in Mongoose\"\n}",
       "form": []
     },
     "tests": []
@@ -682,11 +682,11 @@
     "method": "POST",
     "sortNum": 160000,
     "created": "2023-02-08T19:14:27.106Z",
-    "modified": "2023-02-09T09:51:18.560Z",
+    "modified": "2023-02-10T15:32:26.937Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTkzNjI1MywiZXhwIjoxNjc2MDIyNjUzfQ.2VI55iabtEIKe9K_sOmHg-LV_vxS-mhKWudK84G344g"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NjA0MzEzNiwiZXhwIjoxNjc2MTI5NTM2fQ.DbOicPYx7iSLUCDCItvHI260NUtqClvrqDA3EXebgpg"
       }
     ],
     "params": [],
@@ -706,11 +706,11 @@
     "method": "GET",
     "sortNum": 170000,
     "created": "2023-02-08T20:11:01.225Z",
-    "modified": "2023-02-08T20:25:48.782Z",
+    "modified": "2023-02-10T17:16:51.549Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4NzQ0OSwiZXhwIjoxNjc1OTczODQ5fQ.XppR7UXUjA-7GZDT0wR_sQvyn_YDev4zXwjTAy8q9hQ"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NjA0OTQwNiwiZXhwIjoxNjc2MTM1ODA2fQ.F_kKuxnNzbQ3sx-ZL_Inj_uDORjCQyytUH8PFSE4pco"
       }
     ],
     "params": [],
@@ -773,11 +773,11 @@
     "method": "GET",
     "sortNum": 190000,
     "created": "2023-02-09T09:09:58.918Z",
-    "modified": "2023-02-09T09:28:05.323Z",
+    "modified": "2023-02-10T17:13:27.620Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTkzNDg3NSwiZXhwIjoxNjc2MDIxMjc1fQ.9cfKxqGABnhxPmpMTUrc4bkii3ZBgpV83X0WYANoFkE"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NjA0OTA1NiwiZXhwIjoxNjc2MTM1NDU2fQ.IRYIOsxnM5-a6BKk6NoSneJnTSt8-IMVvIdyf5meiQ4"
       }
     ],
     "params": [],
@@ -835,6 +835,49 @@
       "raw": "{\n  \"id\":\"xypudqubk7sidmzlpcxc\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "6b64ba0a-6125-4b23-a2ef-083a6589ad8c",
+    "colId": "fe8f50a0-847c-4155-b284-54ad65aa43c8",
+    "containerId": "",
+    "name": "Create",
+    "url": "http://localhost:4000/api/enquiry",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-10T18:05:09.622Z",
+    "modified": "2023-02-10T18:08:11.007Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NjA1MjQwMCwiZXhwIjoxNjc2MTM4ODAwfQ.68x5FowoWXBG7s86Hi36mt1sIJsMOq9OZyPU9C8zvBs"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"Nhat Bui\",\n  \"email\":\"buivanduynhat@gmail.com\",\n  \"mobile\":\"093389485\",\n  \"comment\":\"fdsaf adsf dsaf dsaf ads fd\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "03db724b-b350-4414-b8ca-6c43bbc793f5",
+    "colId": "fe8f50a0-847c-4155-b284-54ad65aa43c8",
+    "containerId": "",
+    "name": "Get",
+    "url": "http://localhost:4000/api/enquiry",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2023-02-10T18:11:03.964Z",
+    "modified": "2023-02-10T18:11:15.602Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NjA1MjQwMCwiZXhwIjoxNjc2MTM4ODAwfQ.68x5FowoWXBG7s86Hi36mt1sIJsMOq9OZyPU9C8zvBs"
+      }
+    ],
+    "params": [],
     "tests": []
   }
 ]

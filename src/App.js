@@ -21,6 +21,8 @@ import Conditions from './pages/Conditions/Conditions';
 import SingleProduct from './pages/OurStore/SingleProduct';
 import Cart from './pages/Cart/Cart';
 import Checkout from './pages/Checkout/Checkout';
+import Profile from './pages/Profiles/Profiles';
+import History from './pages/History/History';
 
 function App() {
   return (
@@ -39,13 +41,15 @@ function App() {
           <Route path='login' element = {<Login/>}/>
           <Route path='reset-password' element = {<Forgotpassword/>}/>
           <Route path='register' element = {<Register/>}/>
-          <Route path='comfirm-password' element = {<ResetPassword />}/>
+          <Route path='comfirm-password/:id' element = {<ResetPassword />}/>
           <Route path='privacy-policy' element = {<PrivacyPolicy/>}/>
           <Route path='refund-policy' element = {<RefundPolicy />}/>
           <Route path='shipping-policy' element = {<ShippingPolicy />}/>
           <Route path='conditions' element = {<Conditions />}/>
           <Route path='cart' element = {<Cart/>}/>
           <Route path='checkout' element = {<Checkout/>}/>
+          <Route path='profile' element = {<Profile/>}/>
+          <Route path='history' element = {<History/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

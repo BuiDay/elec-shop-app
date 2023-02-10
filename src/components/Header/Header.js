@@ -17,6 +17,11 @@ const Header = () => {
     const {cartTotalAmount,totalQuantity} = useSelector(state=>state.cart)
     const navigate = useNavigate();
 
+    const log = () =>{
+        window.location.reload();
+        navigate("/");
+    }
+
     return (
         <>
             <header className='header-top-stric py-3'>
@@ -82,8 +87,9 @@ const Header = () => {
                                                     <p className='displayName'>{(user?.data?.firstName + " "+user?.data?.lastName) }</p>
                                                 </div>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <Link class="dropdown-item" to="/">View Profile</Link>
-                                                    <Link class="dropdown-item" onClick={()=>{dispatch(logout()); window.location.reload()}}>Sign out</Link>
+                                                    <Link class="dropdown-item" to="/profile">View Profile</Link>
+                                                    <Link class="dropdown-item" to="/history">History</Link>
+                                                    <Link class="dropdown-item" onClick={()=>{dispatch(logout()); log() }}>Sign out</Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -114,8 +120,10 @@ const Header = () => {
                                         Shop categories
                                     </div>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <Link class="dropdown-item" to="/">View Profile</Link>
-                                        <Link class="dropdown-item" to="/">Sign out</Link>
+                                        <Link class="dropdown-item" to="/profile">Laptop</Link>
+                                        <Link class="dropdown-item" to="/profile">Watch</Link>
+                                        <Link class="dropdown-item" to="/profile">TV</Link>
+                                        <Link class="dropdown-item" to="/profile">Phone</Link>
                                     </div>
                                 </div>
                                 <div className='menu-links'>

@@ -4,8 +4,31 @@ import Breadcrumb from "../../components/Common/Breadcrumb/Breadcrumb";
 import Meta from "../../components/Common/Meta/Meta";
 import {AiOutlineHome, AiOutlineMail} from "react-icons/ai"
 import {BiPhoneCall, BiInfoCircle} from "react-icons/bi"
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import {toast} from 'react-toastify';
+import {createEnq} from '../../features/enquiry/enquirySlice'
+import { useDispatch, useSelector } from 'react-redux';
 
 const Contact = () => {
+    const dispatch = useDispatch();
+    const formik = useFormik({
+        initialValues: {
+          name: '',
+          email:'',
+          mobile:'',
+          comment:'',
+        },
+        validationSchema: Yup.object({
+            name: Yup.string().required('Name is Required'),
+            email:Yup.string().email('Invalid email address').required('Email is Required'),
+            mobile:Yup.string().required('Phone is Required'),
+            comment:Yup.string().required('Comment is Required'),
+          }),
+        onSubmit: values => {
+            dispatch(createEnq(values))
+        },
+      });
   return (
     <>
       <Meta title={"Contact Us"} />
@@ -28,21 +51,50 @@ const Contact = () => {
                 <div className="contact-inner-wrapper d-flex justify-content-between">
                     <div>
                         <h3 className="contact-title mb-4">Contact</h3>
-                        <form action="" className="d-flex flex-column gap-15">
+                        <form action="" className="d-flex flex-column gap-15" onSubmit={formik.handleSubmit}>
                             <div>
-                                <input type="text" className="form-control" placeholder="Name"/>
+                                <input type="text" className="form-control" placeholder="Name" name='name' onChange={formik.handleChange} value={formik.values.name}/>
                             </div>
-                            <div>
-                                <input type="email" className="form-control" placeholder="Email"/>
+                            <div className="error">
+                                {
+                                    formik.touched.name && formik.errors.name ? (
+                                        <div>{formik.errors.name}</div>
+                                    ) : null
+                                }
                             </div>
+                            
                             <div>
-                                <input type="tel" className="form-control" placeholder="Mobile phone"/>
+                                <input type="email" className="form-control" placeholder="Email" name='email' onChange={formik.handleChange} value={formik.values.email}/>
                             </div>
+                            <div className="error">
+                                {
+                                    formik.touched.email && formik.errors.email ? (
+                                        <div>{formik.errors.email}</div>
+                                    ) : null
+                                }
+                                </div>
                             <div>
-                                <textarea name="" id="" cols="30" rows="10" className="w-100 form-control" placeholder="Comment"></textarea>
+                                <input type="tel" className="form-control" placeholder="Mobile phone" name='mobile' onChange={formik.handleChange} value={formik.values.mobile}/>
                             </div>
+                            <div className="error">  {
+                                    formik.touched.mobile && formik.errors.mobile ? (
+                                        <div>{formik.errors.mobile}</div>
+                                    ) : null
+                                }</div>
+                          
                             <div>
-                                <button className="button border-0">Submit</button>
+                                <textarea id="" cols="30" rows="10" className="w-100 form-control" placeholder="Comment" name='comment' onChange={formik.handleChange} value={formik.values.comment}></textarea>
+                            </div>
+                            <div className="error">
+                            {
+                                    formik.touched.comment && formik.errors.comment ? (
+                                        <div>{formik.errors.comment}</div>
+                                    ) : null
+                                }
+                            </div>
+                             
+                            <div>
+                                <button className="button border-0" type="submit">Submit</button>
                             </div>
                         </form>
                     </div>

@@ -54,5 +54,12 @@
     "created": "2023-02-09T18:02:57.530Z",
     "sortNum": 80000,
     "folders": []
+  },
+  {
+    "_id": "fe8f50a0-847c-4155-b284-54ad65aa43c8",
+    "colName": "Enquiry",
+    "created": "2023-02-10T18:05:00.247Z",
+    "sortNum": 90000,
+    "folders": []
   }
 ]

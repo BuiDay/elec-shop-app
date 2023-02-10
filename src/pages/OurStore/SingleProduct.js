@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import './OurStore.css'
 import Breadcrumb from "../../components/Common/Breadcrumb/Breadcrumb";
 import Meta from "../../components/Common/Meta/Meta";
-import ProductCard from '../../components/Home/ProductCard/ProductCard';
+import ProductCards from '../../components/Home/ProductCards/ProductCards';
 import ReactStars from 'react-stars'
 import ReactImageZoom from 'react-image-zoom';
 import Watch from '../../assets/images/watch-41-alum-silver.jpg'
@@ -11,19 +11,37 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { TbGitCompare  } from 'react-icons/tb';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import {getAProduct} from '../../features/products/productsSlice'
+import {getAProduct, ratingAProduct, resetState} from '../../features/products/productsSlice'
 
 const SingleProduct = () => {
     const dispatch = useDispatch();
+    const [star, setStar] = useState("");
+    const [comment, setComment] = useState("");
+
     const {id} = useParams();
     useEffect(()=>{
         dispatch(getAProduct(id))
+        dispatch(resetState());
     },[])
-    let img = [];
     const productState = useSelector(state=>state.products?.product)
+    
+
     let {images} = productState
     const props = {width: 600, height: 500, zoomWidth: 500, img:`${images&&images[0]?.url}`};
     const [orderedProduct, setOrderedProduct] = useState(true)
+
+    const handleRating = () =>{
+        const params = {
+            "star":star,
+            "proId":productState._id,
+            "comment":comment
+        }
+        dispatch(ratingAProduct(params));
+        dispatch(resetState());
+    }
+    const product = useSelector(state=>state.products)
+    let {isSuccess} = product
+
 
     return (
         <>
@@ -222,26 +240,56 @@ const SingleProduct = () => {
                                         )
                                     }
                                 </div>
-                                <div className="review-form py-4" id="review">
-                                    <h4>Write a review</h4>
-                                    <form action="" className='d-flex flex-column gap-20'>
-                                        <div>
-                                            <ReactStars
-                                                count={5}
-                                                size={24}
-                                                edit={true}
-                                                color2={'#ffd700'} />
+                                    {
+                                        !isSuccess ? (
+                                            <div className="review-form py-4" id="review">
+                                            <h4>Write a review</h4>
+                                            <form action="" className='d-flex flex-column gap-20'>
+                                                <div>
+                                                    <ReactStars
+                                                        count={5}
+                                                        size={24}
+                                                        edit={true}
+                                                        color2={'#ffd700'}
+                                                        onChange={(e)=>setStar(e)}
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <textarea name="" id="" cols="30" rows="4" placeholder='Comments' className='w-100 form-control' onChange={(e)=>setComment(e.target.value)}></textarea>
+                                                </div>
+                                                <div className="mt-3 d-flex justify-content-end gap-15 align-items-center">
+                                                    <button className='button border-0' onClick={()=>handleRating()}>Submit Review</button>
+                                                </div>
+                                            </form>
                                         </div>
-                                        <div>
-                                            <textarea name="" id="" cols="30" rows="4" placeholder='Comments' className='w-100 form-control'></textarea>
-                                        </div>
-                                        <div className="mt-3 d-flex justify-content-end gap-15 align-items-center">
-                                            <button className='button border-0'>Submit Review</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                        ):""
+                                    }
+                               
 
                                 <div className="reviews">
+                                   {
+                                    productState?.ratings && productState?.ratings?.map((item,index)=>{
+                                        return(
+                                            <div className="review py-3">
+                                            <div className="d-flex gap-10 align-items-center">
+                                             <h6 className='mb-0'>{item.postedby?.firstName}</h6>
+                                             <ReactStars
+                                                 count={5}
+                                                 size={24}
+                                                 value={item.star}
+                                                 edit={false}
+                                                 color2={'#ffd700'} />
+                                            </div>
+                                            <p className='mt-2'>
+                                             {item.comment}
+                                            </p>
+                                         </div>
+                                        
+                                        )
+                                    })
+                                   }
+                                            
+                                            
                                     <div className="review py-3">
                                        <div className="d-flex gap-10 align-items-center">
                                         <h6 className='mb-0'>Admin</h6>
@@ -287,10 +335,12 @@ const SingleProduct = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
+                        <ProductCards img={require('../../assets/images/watch-2.jpg')}/>
+                        <ProductCards img={require('../../assets/images/watch-41-alum-silver.jpg')}/>
+                        <ProductCards img={require('../../assets/images/watch-ultra.png')}/>
+                        <ProductCards img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCards img={require('../../assets/images/samsung_2.jpg')}/>
+                        <ProductCards img={require('../../assets/images/samsung_1.jpg')}/>
                     </div>
                 </div>
             </section>

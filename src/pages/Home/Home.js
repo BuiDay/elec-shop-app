@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css'
 import Marquee from "react-fast-marquee";
@@ -17,13 +17,19 @@ import Headphone from '../../assets/images/headphone.jpg'
 import Speaker from '../../assets/images/speaker.jpg'
 import Laptop from '../../assets/images/laptop.jpg'
 import BlogCard from '../../components/Home/BlogCard/BlogCard';
-import ProductCard from '../../components/Home/ProductCard/ProductCard';
+import ProductCards from '../../components/Home/ProductCards/ProductCards';
 import SpecialProduct from '../../components/Home/SpecialProduct/SpecialProduct';
 import { useState } from 'react';
-
-
+import { useDispatch, useSelector } from 'react-redux';
+import {getAllProducts} from "../../features/products/productsSlice"
 const Home = () => {
 
+    const productsState = useSelector(state=>state.products.products)
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(getAllProducts())
+    },[])
+    console.log(productsState)
     const THREE_DAYS_IN_MS = 3 * 24 * 8 * 45 * 1000;
     const ONE_DAYS_IN_MS = 5 * 10 * 48 * 54 * 1000;
     const TWO_DAYS_IN_MS = 2 * 15 * 12 * 43 * 1000;
@@ -177,34 +183,34 @@ const Home = () => {
 
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
-                                        <h6>Camera</h6>
+                                        <h6>Phone</h6>
                                         <p>5 Items</p>
                                     </div>
-                                    <img src={Camera} alt="" />
+                                    <img src={require("../../assets/images/tab.jpg")} width={110} alt="" />
                                 </div>
 
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
-                                        <h6>Headphone</h6>
+                                        <h6>Home App</h6>
                                         <p>17 Items</p>
                                     </div>
-                                    <img src={Headphone} alt="" />
+                                    <img src={require("../../assets/images/homeapp.jpg")} alt="" />
                                 </div>
 
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
-                                        <h6>Speaker</h6>
+                                        <h6>TV</h6>
                                         <p>4 Items</p>
                                     </div>
-                                    <img src={Speaker} alt="" />
+                                    <img src={require("../../assets/images/tv.jpg")} alt="" />
                                 </div>
 
                                 <div className='d-flex gap-30 justify-content-evenly align-items-center'>
                                     <div>
-                                        <h6>Laptop</h6>
+                                        <h6>Watch</h6>
                                         <p>14 Items</p>
                                     </div>
-                                    <img src={Laptop} alt="" />
+                                    <img className='img-fluid' src={require("../../assets/images/watch-2.jpg")} alt="" width={80} />
                                 </div>
                             </div>
                         </div>
@@ -218,10 +224,12 @@ const Home = () => {
                         <div className="col-12">
                             <h3 className='section-heading'>Featured Collection</h3>
                         </div>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCards img={require('../../assets/images/watch-2.jpg')}/>
+                        <ProductCards img={require('../../assets/images/watch-41-alum-silver.jpg')}/>
+                        <ProductCards img={require('../../assets/images/watch-ultra.png')}/>
+                        <ProductCards img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCards img={require('../../assets/images/samsung_2.jpg')}/>
+                        <ProductCards img={require('../../assets/images/samsung_1.jpg')}/>
                     </div>
                 </div>
             </section>
@@ -306,10 +314,13 @@ const Home = () => {
                         <div className="col-2">
                             <div className="card"></div>
                         </div>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
-                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        {
+                            productsState?.map((item,index)=>{
+                                return(
+                                    <ProductCard key={index} data={item}/>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </section> */}
