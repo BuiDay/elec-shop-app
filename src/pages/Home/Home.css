@@ -100,7 +100,7 @@
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 0 10px #0000001a;
-    min-height: 440px;
+    min-height: 460px;
 }
 
 .famous-wrapper .famous-content h5{
@@ -124,3 +124,4 @@
     font-weight: 100;
     color: black;
 }
+

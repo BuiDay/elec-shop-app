@@ -3,3 +3,34 @@
     border-radius: 10px;
     background-color: white;
 }
+
+.special-product-content .brand{
+    color:var(--color-febd69);
+}
+
+.other-product{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.other-product > div{
+    padding: 10px;
+    border:  1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.discount-till p{
+    font-size:14px;
+    white-space: nowrap;
+}
+
+.progress-bar{
+    background-color:green;
+}
+
+.progress{
+    height: 0.5rem;
+    margin-top: 10px;
+}

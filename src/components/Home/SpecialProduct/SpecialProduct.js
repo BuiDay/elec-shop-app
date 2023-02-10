@@ -2,14 +2,20 @@ import React from 'react';
 import './SpecialProduct.css'
 import StarRatings from 'react-star-ratings';
 import { Link } from 'react-router-dom';
+import CountdownTimer from '../../Countdown/CountdownTimer';
 
-const SpecialProduct = () => {
+const SpecialProduct = (props) => {
+    console.log(props.timer)
     return (
         <div className='col-4'>
             <div className="special-product-card">
                 <div className="d-flex justify-content-between">
                     <div>
                         <img className='img-fluid' src={require('../../../assets/images/watch.jpg')} alt="" />
+                        <div className="other-product d-flex justify-content-between gap-15 ">
+                            <div><img className='img-fluid' src={require('../../../assets/images/watch-ultra-2.png')} alt="" /></div>
+                            <div><img className='img-fluid' src={require('../../../assets/images/watch-ultra.png')} alt="" /></div>
+                        </div>
                     </div>
                     <div className='special-product-content'>
                         <h5 className='brand'>Sony</h5>
@@ -20,19 +26,12 @@ const SpecialProduct = () => {
                             starDimension="20px"
                             starRatedColor="#ffd700"
                         />
-                        <p className="price">
-                            <span className="red-p">$100</span> &nbsp;
+                        <p className="price mt-2">
+                            <span className="text-danger">$100</span> &nbsp;
                             <strike>$200</strike>
                         </p>
                         <div className="discount-till d-flex align-items-center gap-2">
-                            <p>
-                                <b>5</b> days
-                            </p>
-                            <div className="d-flex gap-1 align-items-center ">
-                                <span className='badge rounded-circle p-3 bg-warning'>1</span>:
-                                <span className='badge rounded-circle p-3 bg-warning'>1</span>:
-                                <span className='badge rounded-circle p-3 bg-warning'>1</span>
-                            </div>
+                            <CountdownTimer targetDate={props.timer} />
                         </div>
                         <div className='prod-count mt-3'>
                             <p>Products: 5</p>
@@ -40,7 +39,7 @@ const SpecialProduct = () => {
                                 <div className="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
-                        <Link className='button'>Add to cart</Link>
+                        <Link className='button py-2 px-3 mt-3'>Option</Link>
                     </div>
                 </div>
             </div>

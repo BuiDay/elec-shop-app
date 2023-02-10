@@ -19,9 +19,19 @@ import Laptop from '../../assets/images/laptop.jpg'
 import BlogCard from '../../components/Home/BlogCard/BlogCard';
 import ProductCard from '../../components/Home/ProductCard/ProductCard';
 import SpecialProduct from '../../components/Home/SpecialProduct/SpecialProduct';
+import { useState } from 'react';
 
 
 const Home = () => {
+
+    const THREE_DAYS_IN_MS = 3 * 24 * 8 * 45 * 1000;
+    const ONE_DAYS_IN_MS = 5 * 10 * 48 * 54 * 1000;
+    const TWO_DAYS_IN_MS = 2 * 15 * 12 * 43 * 1000;
+    const NOW_IN_MS = new Date().getTime();
+
+    const [timer, setTimer] = useState(NOW_IN_MS + THREE_DAYS_IN_MS)
+    const [timer1, setTimer1] = useState(NOW_IN_MS + ONE_DAYS_IN_MS)
+    const [timer2, setTimer2] = useState(NOW_IN_MS +TWO_DAYS_IN_MS)
     return (
         <>
             <section className='home-wrapper-1 py-5'>
@@ -208,10 +218,10 @@ const Home = () => {
                         <div className="col-12">
                             <h3 className='section-heading'>Featured Collection</h3>
                         </div>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
                     </div>
                 </div>
             </section>
@@ -233,33 +243,33 @@ const Home = () => {
                         <div className="col-3">
                             <div className="famous-card p-3">
                                 <div className="famous-content mb-3">
-                                    <h5>Big Screen</h5>
-                                    <h6>Smart Watch Series 8</h6>
+                                    <h5>Studio Display</h5>
+                                    <h6>600 nits of brightness</h6>
                                     <p>Form $399</p>
                                 </div>
-                                <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                                <img className='img-fluid famous-img' src={require('../../assets/images/tab1.jpg')} alt="" />
                             </div>
                         </div>
 
                         <div className="col-3">
                             <div className="famous-card p-3">
                                 <div className="famous-content mb-3">
-                                    <h5>Big Screen</h5>
-                                    <h6>Smart Watch Series 8</h6>
+                                    <h5>Smartphone</h5>
+                                    <h6>Iphone 13 Pro</h6>
                                     <p>Form $399</p>
                                 </div>
-                                <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                                <img className='img-fluid famous-img' src={require('../../assets/images/png.monster-209.png')} alt="" />
                             </div>
                         </div>
 
                         <div className="col-3">
                             <div className="famous-card p-3">
                                 <div className="famous-content mb-3">
-                                    <h5>Big Screen</h5>
-                                    <h6>Smart Watch Series 8</h6>
+                                    <h5>Home Speaker</h5>
+                                    <h6>Room-filling sound</h6>
                                     <p>Form $399</p>
                                 </div>
-                                <img className='img-fluid' src={require('../../assets/images/watch-41-alum-silver.jpg')} alt="" />
+                                <img className='img-fluid famous-img' src={require('../../assets/images/favpng_jbl-clip-2-loudspeaker-enclosure-wireless-speaker.png')} alt="" />
                             </div>
                         </div>
                     </div>
@@ -275,14 +285,14 @@ const Home = () => {
                         
                     </div>
                     <div className="row">
-                        <SpecialProduct/>
-                        <SpecialProduct/>
-                        <SpecialProduct/>
+                        <SpecialProduct timer={timer}/>
+                        <SpecialProduct timer={timer1}/>
+                        <SpecialProduct timer={timer2}/>
                     </div>
                 </div>
             </section>
 
-            <section className='popular-wrapper home-wrapper-2 py-5'>
+            {/* <section className='popular-wrapper home-wrapper-2 py-5'>
                 <div className="container-xxl">
                     <div className="row">
                         <div className="col-12">
@@ -296,13 +306,13 @@ const Home = () => {
                         <div className="col-2">
                             <div className="card"></div>
                         </div>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
+                        <ProductCard img={require('../../assets/images/watch-ultra-2.png')}/>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section className='marquee-wrapper py-5'>
                 <div className="container-xxl">

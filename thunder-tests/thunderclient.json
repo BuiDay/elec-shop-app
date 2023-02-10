@@ -81,11 +81,11 @@
     "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
     "containerId": "",
     "name": "Login",
-    "url": "http://localhost:4000/api/user/login",
+    "url": "http://localhost:5000/api/user/login",
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-01-31T17:30:05.386Z",
-    "modified": "2023-02-02T13:20:25.649Z",
+    "modified": "2023-02-09T13:14:03.803Z",
     "headers": [
       {
         "name": "Authorization",
@@ -615,11 +615,11 @@
     "method": "POST",
     "sortNum": 130000,
     "created": "2023-02-02T12:41:20.566Z",
-    "modified": "2023-02-08T18:29:37.408Z",
+    "modified": "2023-02-09T09:51:00.920Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4MDMwNywiZXhwIjoxNjc1OTY2NzA3fQ.IQ6VrcAr5TPdPalAC_owWimL9XhSoapqNiYMj6n3-AM"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTkzNjI1MywiZXhwIjoxNjc2MDIyNjUzfQ.2VI55iabtEIKe9K_sOmHg-LV_vxS-mhKWudK84G344g"
       }
     ],
     "params": [],
@@ -658,11 +658,11 @@
     "method": "POST",
     "sortNum": 150000,
     "created": "2023-02-08T18:17:41.389Z",
-    "modified": "2023-02-08T19:14:18.146Z",
+    "modified": "2023-02-09T09:51:13.568Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4MTIyMCwiZXhwIjoxNjc1OTY3NjIwfQ.IuZ9krKdY-_a_bRuuko7Wp97al-VH0BW7KbahiFYNaE"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTkzNjI1MywiZXhwIjoxNjc2MDIyNjUzfQ.2VI55iabtEIKe9K_sOmHg-LV_vxS-mhKWudK84G344g"
       }
     ],
     "params": [],
@@ -682,11 +682,11 @@
     "method": "POST",
     "sortNum": 160000,
     "created": "2023-02-08T19:14:27.106Z",
-    "modified": "2023-02-08T19:16:48.048Z",
+    "modified": "2023-02-09T09:51:18.560Z",
     "headers": [
       {
         "name": "Authorization",
-        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTg4MTIyMCwiZXhwIjoxNjc1OTY3NjIwfQ.IuZ9krKdY-_a_bRuuko7Wp97al-VH0BW7KbahiFYNaE"
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk1MDAyNzdkZTY0NTI2MTdhYTRmZCIsImlhdCI6MTY3NTkzNjI1MywiZXhwIjoxNjc2MDIyNjUzfQ.2VI55iabtEIKe9K_sOmHg-LV_vxS-mhKWudK84G344g"
       }
     ],
     "params": [],
@@ -736,6 +736,103 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"status\":\"Procesing\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "35bcc9c9-7832-4d91-9d49-2bc8a78c408b",
+    "colId": "c9e6c281-da1e-4ed1-ac01-df1ecefa1696",
+    "containerId": "",
+    "name": "Add blog",
+    "url": "http://localhost:4000/api/blog",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-02-09T08:37:57.156Z",
+    "modified": "2023-02-09T08:40:33.054Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTkzMTkwMiwiZXhwIjoxNjc2MDE4MzAyfQ.SX0VGvn4RC6KOXvhYJgKzxIE9QVl6pThii52lR7jUr0"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\":\"Blog 345\",\n  \"description\":\"In this video, we'll continue our full stack Mern Ecommerce project and discuss how to integrate our API with our admin panel. In this part, we'll cover how to create an API key and generate an API request.\",\n  \"category\":\"Learn\"\n}\n",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2b4923ca-9b2e-409e-b9c3-fa8dde228633",
+    "colId": "eebcb1db-13a0-47eb-bb44-5e6dc397302f",
+    "containerId": "",
+    "name": "Get All orders",
+    "url": "http://localhost:4000/api/user/get-orders",
+    "method": "GET",
+    "sortNum": 190000,
+    "created": "2023-02-09T09:09:58.918Z",
+    "modified": "2023-02-09T09:28:05.323Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTkzNDg3NSwiZXhwIjoxNjc2MDIxMjc1fQ.9cfKxqGABnhxPmpMTUrc4bkii3ZBgpV83X0WYANoFkE"
+      }
+    ],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "21ecf860-c67a-4d2d-8b8d-92acd521abb3",
+    "colId": "5e8954ba-a820-4c59-bff1-ae569e5be7d9",
+    "containerId": "",
+    "name": "Upload",
+    "url": "http://localhost:4000/api/upload",
+    "method": "PUT",
+    "sortNum": 10000,
+    "created": "2023-02-09T18:03:06.275Z",
+    "modified": "2023-02-09T18:10:08.164Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTk2NTg0NywiZXhwIjoxNjc2MDUyMjQ3fQ.ueHOuYGJ8Xk7171wJHoeaIEze5Bq-DDUXDEicxh9mOg"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [],
+      "files": [
+        {
+          "name": "images",
+          "value": "..\\src\\assets\\images\\apple-watch-series-8.png"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "78f45ca2-2d40-4aac-9b0a-75ff00065c31",
+    "colId": "5e8954ba-a820-4c59-bff1-ae569e5be7d9",
+    "containerId": "",
+    "name": "Delete Img",
+    "url": "http://localhost:4000/api/upload/delete-img",
+    "method": "DELETE",
+    "sortNum": 20000,
+    "created": "2023-02-09T19:48:46.584Z",
+    "modified": "2023-02-09T19:53:50.104Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDk0ZjZlMjYwNjhhMWQwOWM5MWFjZCIsImlhdCI6MTY3NTk2NTg0NywiZXhwIjoxNjc2MDUyMjQ3fQ.ueHOuYGJ8Xk7171wJHoeaIEze5Bq-DDUXDEicxh9mOg"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"id\":\"xypudqubk7sidmzlpcxc\"\n}",
       "form": []
     },
     "tests": []
